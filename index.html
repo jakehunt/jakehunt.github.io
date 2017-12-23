@@ -10,9 +10,20 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>		
   		<style>
-  			h1	{
-  				font-size: 90px;
-  			}
+  			/*Phones*/
+  			@media (min-width: 300px){
+  				h1	{
+	  				font-size: 50px;
+	  				margin-bottom: 20px;
+	  			}
+  			}	
+  			/*Desktops*/
+  			@media (min-width: 767px){
+  				h1	{
+	  				font-size: 90px;
+	  				margin-bottom: 20px;
+	  			}
+  			}	
   			.bg-1 {
   			 	background-color: #ffffff; 	/*White*/
   			 	color: #000000;	
@@ -21,32 +32,45 @@
   			 	background-color: #335170;	/*Navy 80 (GT)*/
   			 	color: #ffffff;
   			}
+  			.bg-3 {
+  				background-color: orange;
+  				color: #000000;
+  			}
   			.navi {
 				background:url("https://78.media.tumblr.com/3c8178a731555a838be3cc5efdb0eff0/tumblr_p1ef6vG8Hn1wy52q8o1_1280.jpg");
 				background-size:cover;
 				opacity:1;
 			}
-			/* Link */
+			/* Link Question: For the following two CSS selectors, why must navbar-default be included in the selection? What does it mean to have .navbar-default and .navbar-nav?*/
 			.navbar-default .navbar-nav > li > a {
     			color: white;
 			}
+			/*a:focus is needed so that the button remains orange after it has been pressed; */
 			.navbar-default .navbar-nav > li > a:hover,
 			.navbar-default .navbar-nav > li > a:focus {
-			    color: #335170;
+			    color: orange;  /*#335170 (Navy 80)*/
 			}
+			.navbar {
+				margin-bottom: 0;
+			}
+			.navbar-text {
+				font-size: 20px;
+				text-align: center;
+			}
+
   		</style>
 	</head>
 	<body>
 	<nav class="navbar navbar-default navbar-static-top navi">
 		<div class= "container">
-			<div class="navbar-header">
-			</div>
-			<button type="button" class="navbar-toggle collapsed navbar-text" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			<!--Navbar header optional-->
+			<button type="button" class="navbar-toggle collapsed navbar-text" data-toggle="collapse" data-target="#pageNavButtons" aria-expanded="false" aria-controls="navbar">
 		        <span class="sr-only">Toggle navigation</span>
 		        <i class="fa fa-bars" aria-hidden="true"></i>
           	</button>
-			<div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav navbar-right">	<!--navbar-right important-->
+
+			<div id="pageNavButtons" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right navbar-text">	<!--navbar-right important-->
 					<li><a href="#">About</a></li>
 					<li><a href="#">Projects</a></li>
 					<li><a href="#">Contact</a></li>
@@ -54,7 +78,7 @@
 			</div>
 		</div>
 	</nav>
-	<div class="container-fluid">
+	<div class="container-fluid bg-3">
 		<div class="row">
 			<div class="col-sm-1"></div>
 			<div class="col-sm-4">
