@@ -11,18 +11,29 @@
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>		
   		<style>
   			/*Phones*/
-  			@media (min-width: 300px){
+  			@media (min-width: 200px){
   				h1	{
 	  				font-size: 50px;
+	  				font-weight: bold;
 	  				margin-bottom: 20px;
-	  				text-align: right;
+	  				text-align: center;
 	  			}
 	  			h2 {
-	  				font-size: 20px;
+	  				font-size: 30px;
+					text-align: center;
+				}
+				h3 {
+					line-height: 120%;
 					text-align: center;
 				}
 				.profile-pic {
 	  				background-color: #335170
+				}
+				.head {
+					text-align: center;
+				}
+				.spaceholder {
+					padding-top: 10px;
 				}
   			}	
   			/*Desktops*/
@@ -33,14 +44,24 @@
 	  				text-align: left;
 	  			}
 	  			h2 {
+	  				font-size: 30px;
+					text-align: center;					
+				}
+				h3 {
+					line-height: 120%;
 					text-align: center;
-					margin: 20px 20px 0 0;
-					padding: 10px 0 10px 0;
 				}
 	  			.profile-pic {
+	  				background-color: white;
 	  				margin: 25px 25px 25px 25px;
-					padding: 25px 25px 25px 25px;
-					border: 20px solid #335170;
+					padding: 20px 20px 20px 20px;
+					border: 17px solid #335170;
+				}
+				.head {
+					text-align: center;
+				}
+				.spaceholder {
+					padding-top: 30px;
 				}
   			}
   			body {
@@ -96,8 +117,8 @@
 
 			<div id="pageNavButtons" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right navbar-text">	<!--navbar-right important-->
-					<li><a href="#">About</a></li>
-					<li><a href="#">Projects</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#projects">Projects</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
 			</div>
@@ -117,13 +138,27 @@
 					<img class="img-responsive" src="https://78.media.tumblr.com/fb3c05ddb39a65732b2758b84717acd4/tumblr_p1g5cmXgv41wy52q8o1_1280.jpg" alt="Fake-Profile-Picture">			
 			</div>
 			<div class="col-sm-6">
-				<div class="row">
-					<h2>    <i class="fa fa-square icon-smaller" aria-hidden="true"></i> Student <i class="fa fa-square icon-smaller" aria-hidden="true"></i> Tutor <i class="fa fa-square icon-smaller" aria-hidden="true"></i> Traveler <i class="fa fa-square icon-smaller" aria-hidden="true"></i></h2>
+				<div class="row spaceholder">
+					
 				</div>
 				<div class="row">
-					<p></p>
+					<h2 id="about"><i class="fa fa-square icon-smaller" aria-hidden="true"></i> <u>About</u> <i class="fa fa-square icon-smaller" aria-hidden="true"></i></h2>
+				</div>
+				<div class="row">
+					<h3>Hi! My name is Jake Million Hunt.</h3>
+					<h2><strong>I love design.</strong></h2>
+					<h3> I am currently studying mechanical engineering at Georgia Tech. My hobbies include coding, skiing, apologetics, playing soccer, teaching math, and playing board games. </h3>
+					<h2><strong>I enjoy learning.</strong></h2>
+					<h3><i class="fa fa-arrow-down" aria-hidden="true"></i> Check out some of my projects below! <i class="fa fa-arrow-down" aria-hidden="true"></i></h3>					
 				</div>
 			</div>
+		</div>
+		<div class="row bg-3">
+			<div class="col-sm-6"></div>
+			<div class="col-sm-5">
+				<h1 class="head" id="projects">projects</h1>
+			</div>
+			<div class="col-sm-1"></div>
 		</div>
 	</div>
 	</body>
