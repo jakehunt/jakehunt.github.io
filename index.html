@@ -15,15 +15,30 @@
   				h1	{
 	  				font-size: 50px;
 	  				margin-bottom: 20px;
+	  				text-align: right;
 	  			}
+	  			h2 {
+					text-align: center;
+				}
   			}	
   			/*Desktops*/
   			@media (min-width: 767px){
   				h1	{
 	  				font-size: 90px;
 	  				margin-bottom: 20px;
+	  				text-align: left;
 	  			}
-  			}	
+	  			h2 {
+					text-align: center;
+					margin: 20px 20px 0 0;
+				}
+	  			.profile-pic {
+					padding: 25px 25px 25px 25px;
+				}
+  			}
+  			body {
+  				font-family: Century Gothic;
+  			}
   			.bg-1 {
   			 	background-color: #ffffff; 	/*White*/
   			 	color: #000000;	
@@ -58,6 +73,7 @@
 				text-align: center;
 			}
 
+
   		</style>
 	</head>
 	<body>
@@ -81,8 +97,23 @@
 	<div class="container-fluid bg-3">
 		<div class="row">
 			<div class="col-sm-1"></div>
-			<div class="col-sm-4">
-				<h1>MALLORY SUCKS</h1>
+			<div class="col-sm-8">
+				<h1>jake million</h1>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row bg-2">
+			<div class="col-sm-5 profile-pic">
+				<img class="img-responsive img-rounded" src="https://78.media.tumblr.com/fb3c05ddb39a65732b2758b84717acd4/tumblr_p1g5cmXgv41wy52q8o1_1280.jpg" alt="Fake-Profile-Picture">
+			</div>
+			<div class="col-sm-7">
+				<div class="row">
+					<h2 class="bg-3">    <i class="fa fa-square" aria-hidden="true"></i> Student <i class="fa fa-square" aria-hidden="true"></i> Tutor <i class="fa fa-square" aria-hidden="true"></i> Traveler <i class="fa fa-square" aria-hidden="true"></i></h2>
+				</div>
+				<div class="row">
+					<p></p>
+				</div>
 			</div>
 		</div>
 	</div>
