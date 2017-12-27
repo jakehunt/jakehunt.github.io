@@ -19,7 +19,7 @@
 	  				text-align: center;
 	  			}
 	  			h2 {
-	  				font-size: 30px;
+	  				font-size: 28px;
 					text-align: center;
 				}
 				h3 {
@@ -63,6 +63,12 @@
 				}
 				.spaceholder {
 					padding-top: 30px;
+				}
+				.image {
+					margin-top: 50px;
+				}
+				#email {
+					padding-top:40px;
 				}
   			}
   			body {
@@ -121,6 +127,18 @@
 			.carousel-control.left {
 				background-image: none;
 			}
+			a:hover,a:focus {
+				color: orange;
+			}
+			#projectspace {	
+				margin-top:50px;
+			}
+			#links {
+				padding-bottom: 600px;
+			}
+			#links > h2 {
+				color: white;
+			}
   		</style>
 	</head>
 	<body>
@@ -136,7 +154,7 @@
 				<ul class="nav navbar-nav navbar-right navbar-text">	<!--navbar-right important-->
 					<li><a href="#about">About</a></li>
 					<li><a href="#projects">Projects</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</div>
 		</div>
@@ -179,7 +197,7 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-1"></div>
-			<div class="col-sm-4">
+			<div class="col-sm-4 image">
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
 				  <!-- Wrapper for slides -->
 				  <div class="carousel-inner">
@@ -210,9 +228,31 @@
 				</div>
 			</div>
 			<div class="col-sm-2"></div>
-			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+				<div class="image">
+					<img class="img-responsive" src="https://78.media.tumblr.com/e55e11472f53c7d884f619aecb8a0016/tumblr_p1my6nmVs91wy52q8o1_500.jpg" alt="Electrostatic Force Project">
+				</div>
+				<div class="row">
+					<a href=https://www.khanacademy.org/computer-programming/electrostatic-force/5544610432745472><h2>Javascript + Physics Sandbox</h2></a>
+				</div>
+				<div class="row"><h3><i class="fa fa-arrow-up" aria-hidden="true"></i> Link <i class="fa fa-arrow-up" aria-hidden="true"></i></h3></div>
+			</div>
 			<div class="col-sm-1"></div>
 		</div>
+		<div class="row bg-3" id="projectspace">
+			<div class="col-sm-1"></div>
+			<div class="col-sm-5">
+				<h1 class="head" id="contact">Contact:</h1>
+			</div>
+			<div class="col-sm-2">
+				<h2 id="email">jhunt0398@gatech.edu</h2>
+			</div>
+			<div class="col-sm-3"></div>
+		</div>
+		<div class="row navi" id="links">
+			<h2>Favorite Internet Links</h2> <!--Bump GooglePageRank-->
+		</div>
+
 	</div>
 	</body>
 </html>
