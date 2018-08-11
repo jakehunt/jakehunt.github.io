@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Jake Million Build</title>
+	<title>Jake Million</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
@@ -31,7 +31,7 @@
   </div>
 </nav>
 
-<div class="container-fluid bg-1 text-center">
+<div class="container-fluid bg-3 text-center">
 	<img class="img-responsive img-circle profile-pic" style="display:inline" src="https://78.media.tumblr.com/44187ee23eab5440f3c05529a0529fa5/tumblr_pdb9ad65mJ1wy52q8o1_1280.jpg"  alt="Real-Profile-Picture">
 </div>
 
@@ -49,7 +49,7 @@
 <div class="container-fluid bg-1 pad-only"></div>
 
 <div class="container-fluid">
-	<div class="row descriptor text-center">
+	<div class="row nomarg descriptor text-center">
 	<div class="col-sm-1"></div>
 	<div class="col-sm-3">
 		<h2 class="descriptor-text">Solidworks Violin</h2>
@@ -60,15 +60,15 @@
 		  	<!-- Wrapper for slides -->
 		  	<div class="carousel-inner">
 		    	<div class="item active">
-		      		<img src="https://78.media.tumblr.com/99d380472e70cb176401bf54eb28eecb/tumblr_p1kthfXkYL1wy52q8o1_1280.jpg" class="img-responsive " alt="Violin Main View">
+		      		<img src="https://78.media.tumblr.com/99d380472e70cb176401bf54eb28eecb/tumblr_p1kthfXkYL1wy52q8o1_1280.jpg" class="img-responsive carousel-image" alt="Violin Main View">
 		    	</div>
 
 		    	<div class="item">
-		      		<img src="https://78.media.tumblr.com/eebe3f91ec39e9f02fb01b2b4d933c42/tumblr_p1kthrbCxP1wy52q8o1_1280.jpg" class="img-responsive " alt="Violin Top View (Frog View)"">
+		      		<img src="https://78.media.tumblr.com/eebe3f91ec39e9f02fb01b2b4d933c42/tumblr_p1kthrbCxP1wy52q8o1_1280.jpg" class="img-responsive carousel-image" alt="Violin Top View (Frog View)"">
 		    	</div>
 
 		    	<div class="item">
-		      		<img src="https://78.media.tumblr.com/f23e6317ed9291751a0c53459d7f553c/tumblr_p1kthyaHxQ1wy52q8o1_1280.jpg" class="img-responsive  " alt="Violin Side View">
+		      		<img src="https://78.media.tumblr.com/f23e6317ed9291751a0c53459d7f553c/tumblr_p1kthyaHxQ1wy52q8o1_1280.jpg" class="img-responsive carousel-image" alt="Violin Side View">
 		    	</div>
 		  	</div>
 
@@ -94,14 +94,22 @@
 	<div class="row descriptor text-center">
 	<div class="col-sm-1"></div>
 	<div class="col-sm-6">
+		<div id="physicsplug-in">
 		<p align="center"> 
 		<!--This draws the Canvas on the webpage -->
 	        <canvas id="mycanvas"></canvas> 
 	    </p>
+	    </div>
+	    <div id="mobile-div">
+			<img class="img-responsive" src="https://78.media.tumblr.com/e55e11472f53c7d884f619aecb8a0016/tumblr_p1my6nmVs91wy52q8o1_500.jpg" alt="Electrostatic Force Project">
+			<a href=https://www.khanacademy.org/computer-programming/electrostatic-force/5544610432745472><h2>Javascript + Physics Sandbox</h2></a>
+		</div>
 	</div>
 	<div class="col-sm-1"></div>
 	<div class="col-sm-3">
+		<div id="physicsplug-in">
 		<h2 class= "descriptor-text">Javascript + Physics Sandbox</h2>
+		</div>
 	</div>
 	<div class="col-sm-1"></div>
 	</div>
@@ -112,8 +120,8 @@
   <h2 id="contact">Contact:</h2>
   <p class="margin">jhunt0398@gmail.com</p>
 </footer>
-
+<script src="physics.js"></script>
 </body>
 
-<script src="physics.js"></script>
+
 </html>

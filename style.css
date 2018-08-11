@@ -8,6 +8,12 @@
 				font-size: 35px;
 				color: var(--color3);
 			}
+			#physicsplug-in {
+				display: none;
+			}
+			#mobile-div {
+				display: block;
+			}
 		}
 		@media (min-width: 900px) {
 			.descriptor {
@@ -21,12 +27,18 @@
 				font-size: 50px;
 				color: var(--color3);
 			}
+			#physicsplug-in {
+				display: block;
+			}
+			#mobile-div {
+				display: none;
+			}
 		}
 
 		:root {
-			--color1: #8FBCE5; /* Sky Blue     var(--color1)   */
-			--color2: #59606F; /* Slate Gray   var(--color2)  */
-			--color3: #6391C3; /*Steel Blue    var(--color3) */	
+			--color1: #8FBCE5; /* Sky Blue     var(--color1)  Light Color */  
+			--color2: #59606F; /* Slate Gray   var(--color2)  Dark Color  */  
+			--color3: #6391C3; /*Steel Blue    var(--color3) */
 			--color4: white;   /* White        var(--color3) */
 			--color5: black;   /* Black        var(--color5) */
 		}
@@ -71,6 +83,7 @@
 		    margin-bottom: 0;
 		    font-size: 20px;
 		    letter-spacing: 5px;
+		    background-color: var(--color1);
 		    color: var(--color2);
 		}
 
@@ -84,10 +97,12 @@
 		}
 
 		.navbar-nav li a:hover {
-		    color: var(--color1) !important;
+		    color: var(--color3) !important;
 		}
 
 		.margin {margin-bottom: 45px;}
+
+
 
 		.nopad {			
 			padding-top: 0px;
@@ -99,16 +114,13 @@
 		}
 
 		.pad-only {
-			padding-top: 30px;
-			padding-bottom: 30px;
+			padding-top: 40px;
+			padding-bottom: 40px;
 		}
 
-		.profile-pic {
-			border-style: solid;
-			border-width: 13px;
-			border-color: var(--color3);
-			width: 100%;
-			max-width: 500px;
+		.nopad {			
+			padding-top: 0px;
+			padding-bottom: 0px;
 		}
 
 		.glyphicon {
@@ -120,4 +132,17 @@
 		}
 		.carousel-control.left {
 			background-image: none;
+		}
+
+		.carousel-image {
+			width:100%;
+			height: 545px;
+		}
+
+		.profile-pic {
+			border-style: solid;
+			border-width: 13px;
+			border-color: var(--color3);
+			width: 100%;
+			max-width: 500px;
 		}
