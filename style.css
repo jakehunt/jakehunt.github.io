@@ -1,148 +1,123 @@
-
-/*Phones*/
-@media (min-width: 200px){
-		h1	{
-			font-size: 50px;
-			font-weight: bold;
-			margin-bottom: 20px;
-			text-align: center;
+		@media (min-width: 200px){
+			.descriptor {
+				justify-content:center;
+				align-items:center;
+				width:100%;
+			}
+			.descriptor-text {
+				font-size: 35px;
+				color: var(--color3);
+			}
 		}
-		h2 {
-			font-size: 28px;
-		text-align: center;
-	}
-	h3 {
-		line-height: 120%;
-		text-align: center;
-		padding: 0 10px 0 10px;
-	}
-	.profile-pic {
-			background-color: #335170
-	}
-	.head {
-		text-align: center;
-	}
-	.spaceholder {
-		padding-top: 10px;
-	}
-}	
+		@media (min-width: 900px) {
+			.descriptor {
+				display:flex;
+				justify-content:center;
+				align-items:center;
+				width:100%;
+			}
+
+			.descriptor-text {
+				font-size: 50px;
+				color: var(--color3);
+			}
+		}
+
+		:root {
+			--color1: #8FBCE5; /* Sky Blue     var(--color1)   */
+			--color2: #59606F; /* Slate Gray   var(--color2)  */
+			--color3: #6391C3; /*Steel Blue    var(--color3) */	
+			--color4: white;   /* White        var(--color3) */
+			--color5: black;   /* Black        var(--color5) */
+		}
 
 
-/*Desktops*/
-@media (min-width: 767px){
-	h1	{
-		font-size: 90px;
-		margin-bottom: 20px;
-		text-align: left;
-	}
-	h2 {
-		font-size: 30px;
-	text-align: center;					
-	}
-	h3 {
-		line-height: 120%;
-		text-align: center;
-	}
-	.profile-pic {
-		background-color: white;
-		margin: 25px 25px 25px 25px;
-	padding: 20px 20px 20px 20px;
-	border: 17px solid #335170;
-	}
-	.topmarg {
-		margin-top: 80px;
-	}
-	.bottommarg {
-		margin-bottom: 80px;
-	}
-	.bottommarg2 {
-		margin-bottom: 30px;
-	}
-	.head {
-		text-align: center;
-	}
-	.spaceholder {
-		padding-top: 30px;
-	}
-	.image {
-		margin-top: 50px;
-	}
-	#email {
-		padding-top:40px;
-	}
+		body {
+		    font: 20px "Montserrat", sans-serif;
+		    line-height: 1.8;
+		}
 
-}
+		p {font-size: 16px;}
 
+		h1 {font-size: 75px;}
 
-body {
-	font-family: Century Gothic;
-}
-.bg-1 {
- 	background-color: #ffffff; 	/*White*/
- 	color: #000000;	
-}
-.bg-2 {
- 	background-color: #335170;	/*Navy 80 (GT)*/
- 	color: #ffffff;
-}
-.bg-3 {
-	background-color: orange;
-	color: #000000;
-}
-.navi {
-background:url("https://78.media.tumblr.com/3c8178a731555a838be3cc5efdb0eff0/tumblr_p1ef6vG8Hn1wy52q8o1_1280.jpg");
-background-size:cover;
-opacity:1;
-}
+		.container-fluid {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
 
+		.bg-1 {
+			background-color: var(--color1);  
+			color: var(--color4);
+		}
+		.bg-2 {
+			background-color: var(--color2); 
+			color: var(--color4);
+		}
+		.bg-3 {
+			background-color: var(--color4); 
+			color: var(--color2);
+		}
+		.bg-4 { 
+		    background-color: var(--color2); 
+		    color: var(--color4);
+		}
 
-/* Link Question: For the following two CSS selectors, why must navbar-default be included in the selection? What does it mean to have .navbar-default and .navbar-nav?*/
-.navbar-default .navbar-nav > li > a {
-	color: white;
-}
-/*a:focus is needed so that the button remains orange after it has been pressed; */
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-    color: orange;  /*#335170 (Navy 80)*/
-}
-.navbar {
-	margin-bottom: 0;
-}
-.navbar-text {
-	font-size: 20px;
-	text-align: center;
-}
-.icon-smaller {
-	font-size:.75em;
-}
-.carousel-indicators li {
-	background-color: #808080;
-}
+		.navbar {
+		    padding-top: 15px;
+		    padding-bottom: 15px;
+		    border: 0;
+		    border-radius: 0;
+		    margin-bottom: 0;
+		    font-size: 20px;
+		    letter-spacing: 5px;
+		    color: var(--color2);
+		}
 
-.carousel-indicators .active {
-	background-color: #000000;
-}
+		.navbar-brand {
+			font-size: 30px;
+			color: var(--color2) !important;
+		}
 
-.glyphicon {
-	color: black;
-}
-.carousel-control.right {
-	background-image: none;
-}
-.carousel-control.left {
-	background-image: none;
-}
-a:hover,a:focus {
-	color: orange;
-}
-#projectspace {	
-	margin-top:50px;
-}
-#links {
-	padding-bottom: 400px;
-	text-align: center;
-	font-size: 30px;
-}
-#links > h2 {
-	color: white;
-}
+		.navbar-nav li a {
+		    color: var(--color2) !important;
+		}
+
+		.navbar-nav li a:hover {
+		    color: var(--color1) !important;
+		}
+
+		.margin {margin-bottom: 45px;}
+
+		.nopad {			
+			padding-top: 0px;
+			padding-bottom: 0px;
+		}
+
+		.nomarg {
+			margin: 0px 0px 0px 0px;
+		}
+
+		.pad-only {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+
+		.profile-pic {
+			border-style: solid;
+			border-width: 13px;
+			border-color: var(--color3);
+			width: 100%;
+			max-width: 500px;
+		}
+
+		.glyphicon {
+			color: black;
+		}
+
+		.carousel-control.right {
+			background-image: none;
+		}
+		.carousel-control.left {
+			background-image: none;
+		}
