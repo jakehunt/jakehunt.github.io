@@ -15,6 +15,7 @@
 				display: block;
 			}
 		}
+		
 		@media (min-width: 900px) {
 			.descriptor {
 				display:flex;
