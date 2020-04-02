@@ -1,7 +1,21 @@
 
 var sketchProc = function(processingInstance) {
  with (processingInstance) {
-    size(400, 400); 
+ 	var field = true;
+ 	var titleSize = 40;
+ 	var menuTextSize = 20;
+ 	var buttonTextSize = 15;
+ 	if ($(window).width() < 450) {
+ 		size(300, 300);
+ 		field = false;
+ 		titleSize = 25;
+ 		buttonTextSize = 10;
+ 		menuTextSize = 15;
+ 	}
+ 	else {
+    	size(400, 400); 
+    }
+
     frameRate(60);
     
     // ProgramCodeGoesHere
@@ -77,7 +91,7 @@ var sketchProc = function(processingInstance) {
 		    fill(this.color);
 		    rect(this.x, this.y, this.width, this.height);
 		    fill(0, 0, 0);
-		    textFont("monospace", 20);
+		    textFont("monospace", menuTextSize);
 		    text(this.text, this.x + this.width/2, this.y + this.height/2);
 		};
 
@@ -115,22 +129,22 @@ var sketchProc = function(processingInstance) {
 
 		//Initialize Buttons
 		{    //Button(x,y, width, height, color, text, fcolor)
-		    var randomButton = new Button(75, 113, 100, 50, color(255, 0, 0), "RANDOM", color(0, 179, 255));
-		    var manualButton = new Button(222, 249, 100, 50, color(0, 200, 255), "MANUAL", color(255, 0, 0));
-		    var resetButton = new Button(315, 363, 80, 30, color(187, 140, 209), "RESET");
-		    var menuButton = new Button(8, 363, 68, 30, color(187, 140, 209), "MENU", color(255, 0, 0));
-		    var particleDisplay = new Button(173, 363, 40, 30, color(187,140,209), num);
+		    var randomButton = new Button(.1875*width, .2825*height, 0.25*width, .125*height, color(255, 0, 0), "RANDOM", color(0, 179, 255));
+		    var manualButton = new Button(.555*width, 0.6225*height, 0.25*width, .125*height, color(0, 200, 255), "MANUAL", color(255, 0, 0));
+		    var resetButton = new Button(.7875*width, 0.9075*height, .2*width, 0.075*height, color(187, 140, 209), "RESET");
+		    var menuButton = new Button(0.02*width, 0.9075*height, 0.17*width, 0.075*height, color(187, 140, 209), "MENU", color(255, 0, 0));
+		    var particleDisplay = new Button(0.4325*width, 0.9075*height, 0.1*width, 0.075*height, color(187,140,209), num);
 		    //Arrow(x,y, width, height, color, text, fcolor)
-		    var left = new Arrow(136, 363, 30, 30, color(187, 140, 209));
-		    var right = new Arrow(219, 363, 30, 30, color(187, 140, 209));
+		    var left = new Arrow(0.34*width, 0.9075*height, 0.075*width, 0.075*height, color(187, 140, 209));
+		    var right = new Arrow(0.5475*width, 0.9075*height, 0.075*width, 0.075*height, color(187, 140, 209));
 		    
 		    //Manual UI Buttons
-		    var pButton = new Button(0, 0, 20, 20, color(120, 120, 120), "+");
-		    var nButton = new Button(380, 0, 20, 20, color(120, 120, 120), "-");
-		    var releaseButton = new Button(295, 363, 100, 30, color(187, 140, 209), "RELEASE");
-		    var cancelButton = new Button(125, 362, 30, 30, color(120, 120, 120), "X");
-		    var resetButton2 = new Button(315, 323, 80, 30, color(187, 140, 209), "RESET");
-		    var redoButton = new Button(195, 363, 90, 30, color(187, 140, 209), "REPEAT");
+		    var pButton = new Button(0, 0, 0.05*width, 0.05*height, color(120, 120, 120), "+");
+		    var nButton = new Button(0.95*width, 0, 0.05*width, 0.05*height, color(120, 120, 120), "-");
+		    var releaseButton = new Button(0.7375*width, 0.9075*height, 0.25*width, 0.075*height, color(187, 140, 209), "RELEASE");
+		    var cancelButton = new Button(0.3125*width, 0.905*height, 0.075*width, 0.075*height, color(120, 120, 120), "X");
+		    var resetButton2 = new Button(0.7875*width, 0.8075*height, 0.2*width, 0.075*height, color(187, 140, 209), "RESET");
+		    var redoButton = new Button(0.4875*width, 0.9075*height, 0.225*width, 0.075*height, color(187, 140, 209), "REPEAT");
 		}
 		}
 
@@ -233,10 +247,10 @@ var sketchProc = function(processingInstance) {
 		for (var i = 0; i < num; i++) {
 		        var n = random();
 		        if (n > 0.5) {
-		            particles.push(new Proton(1/2, round(random(100, 300)), round(random(100, 300))));       pcount++;
+		            particles.push(new Proton(1/2, round(random(0.25*width, 0.75*width)), round(random(0.25*height, 0.75*height))));       pcount++;
 		        }
 		        else {
-		            particles.push(new Electron(1/5, round(random(100, 300)), round(random(100, 300))));       ecount++;
+		            particles.push(new Electron(1/5, round(random(0.25*width, 0.75*width)), round(random(0.25*height, 0.75*height))));       ecount++;
 		        }
 		    }
 		};
@@ -245,9 +259,9 @@ var sketchProc = function(processingInstance) {
 		    mouse = new PVector(mouseX, mouseY);
 		    if (scene === 0) {
 		        background(255, 255, 255);
-		        randomButton.display(true);
-		        manualButton.display(true);
-		        textFont(f35, 40);
+		        randomButton.display(field);
+		        manualButton.display(field);
+		        textFont(f35, titleSize);
 		        fill(0, 0, 0);
 		        text("Electrostatic Force",width/2, height/2);
 		        if (randomButton.inButton()) {
@@ -284,7 +298,7 @@ var sketchProc = function(processingInstance) {
 		        particleDisplay.update(num);
 		        left.display(false);
 		        right.display(true);
-		        textSize(15);
+		        textSize(buttonTextSize);
 		        text("Particles", 193, 353);
 		        text(pcount, 107, 378);
 		        text("Protons", 107, 353);
@@ -300,8 +314,8 @@ var sketchProc = function(processingInstance) {
 		    }
 		    else if (scene === 2) {
 		        background(209, 209, 209);
-		        textFont(f,15);
-		        text("<--Press Buttons to Choose Particles-->", 200, 10);
+		        textFont(f,buttonTextSize);
+		        text("<--Press Buttons to Choose Particles-->", 0.5*width, 0.025*height);
 		        if (~released) {
 		            for (var i = 0; i < particles.length; i++) {
 		                particles[i].display();
