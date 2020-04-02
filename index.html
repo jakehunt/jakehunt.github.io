@@ -3,134 +3,66 @@
 <head>
 	<title>Jake Million</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="style.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
 </head>
+
 <body>
-
-<!--**** NAVBAR CODE **********************************************************************-->
-<nav class="navbar navbar-default">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="glyphicon glyphicon-menu-hamburger"></span>
+  <!--**** NAVBAR CODE **********************************************************************-->
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">jake million</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">jake million</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar"git >
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">about</a></li>
-        <li><a href="#projects">projects</a></li>
-        <li><a href="#contact">contact</a></li>
-      </ul>
-    </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">about</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">contact</a></li>
+        </ul>
+      </div>
   </div>
-</nav>
+  </nav>
 
-<!--**** PROFILE PIC *********************************************************************-->
-<div class="container-fluid bg-3 text-center">
-	<img class="img-responsive img-circle profile-pic" style="display:inline" src="https://78.media.tumblr.com/44187ee23eab5440f3c05529a0529fa5/tumblr_pdb9ad65mJ1wy52q8o1_1280.jpg"  alt="Real-Profile-Picture">
-</div>
+  <canvas id="canvas"></canvas>
 
-<!--**** ABOUT SECTION *******************************************************************-->
-<div class="container-fluid bg-2 text-center">
-  <h2 id="about">About</h2>
-  <h3>Hi! My Name is Jake Hunt!</h3>
-  <h3> I am currently studying mechanical engineering at Georgia Tech. My hobbies include coding, skiing, apologetics, playing soccer, teaching math, and playing board games. </h3>
-  <h3 class="margin">Check out my projects below!</h3>
-</div>
 
-<!--**** PROJECTS TITLE ROW **************************************************************-->
-<div class="container-fluid bg-3 nopad text-center">
-<h1 id="projects">Projects<h1>
-</div>
+  <!--**** SPACER ROW **************************************************************-->
+  <div class="container-fluid" id="bottomSpacerStatic"></div>
 
-<!--**** SPACER ROW **********************************************************************-->
-<div class="container-fluid bg-1 pad-only"></div>
+  <!--**** SPACER ROW **************************************************************-->
+  <div class="container-fluid" id="bottomSpacerStatic"></div>
 
-<!--**** PROJECT: SOLIDWORKS VIOLIN AND CAROUSEL **************************************************-->
-<div class="container-fluid">
-	<div class="row nomarg descriptor text-center">
-	<div class="col-sm-1"></div>
-	<div class="col-sm-3">
-		<h2 class="descriptor-text">Solidworks Violin</h2>
-	</div>
-	<div class="col-sm-1"></div>
-	<div class="col-sm-6">
-		<div id="myCarousel" class="carousel slide margin" data-ride="carousel">
-		  	<!-- Wrapper for slides -->
-		  	<div class="carousel-inner">
-		    	<div class="item active">
-		      		<img src="https://78.media.tumblr.com/99d380472e70cb176401bf54eb28eecb/tumblr_p1kthfXkYL1wy52q8o1_1280.jpg" class="img-responsive carousel-image" alt="Violin Main View">
-		    	</div>
+  <!--**** CONTACT FOOTER **************************************************************-->
+  <footer class="container-fluid text-center">
+    <h2 id="contact">Contact:</h2>
+    <p class="margin">jhunt0398@gmail.com</p>
+  </footer>
 
-		    	<div class="item">
-		      		<img src="https://78.media.tumblr.com/eebe3f91ec39e9f02fb01b2b4d933c42/tumblr_p1kthrbCxP1wy52q8o1_1280.jpg" class="img-responsive carousel-image" alt="Violin Top View (Frog View)"">
-		    	</div>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <script> 
+    //Jquery Practice Code
+    wHeight = $(window).height()
+    wWidth = $(window).width()
+    $navbar = $(".navbar")
+    console.log("Window Height in Pixels: " + wHeight)
+    console.log("Window Width in Pixels: " + wWidth)
+    console.log("Navbar Height in Pixels: " + $navbar.outerHeight(true))
+  </script>
 
-		    	<div class="item">
-		      		<img src="https://78.media.tumblr.com/f23e6317ed9291751a0c53459d7f553c/tumblr_p1kthyaHxQ1wy52q8o1_1280.jpg" class="img-responsive carousel-image" alt="Violin Side View">
-		    	</div>
-		  	</div>
+  <!--old: 1.4.8 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.8/processing.min.js"></script> 
+  <!--new 1.6.6 --> 
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>  -->
 
-			  <!-- Left and right controls -->
-			  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-			    <span class="glyphicon glyphicon-chevron-left"></span>
-			    <span class="sr-only">Previous</span>
-			  </a>
-			  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-			    <span class="glyphicon glyphicon-chevron-right"></span>
-			    <span class="sr-only">Next</span>
-			  </a>
-		</div>
-	</div>
-	<div class="col-sm-1">
-	</div>
-</div>
-</div>
-
-<!--**** SPACER ROW **************************************************************-->
-<div class="container-fluid bg-1 pad-only"></div>
-
-<!--**** PROJECTS: KHANACADEMY JAVASCRIPTS AND PHYSICS CANVAS ************************************-->
-<div class="container-fluid bg-3">
-	<div class="row descriptor text-center nomarg">
-	<div class="col-sm-1"></div>
-	<div class="col-sm-6">
-		<div id="physicsplug-in">
-		<p align="center"> 
-		<!--This draws the Canvas on the webpage -->
-	        <canvas id="mycanvas"></canvas> 
-	    </p>
-	    </div>
-	    <div class="row" id="mobile-div">
-			<img class="img-responsive" src="https://78.media.tumblr.com/e55e11472f53c7d884f619aecb8a0016/tumblr_p1my6nmVs91wy52q8o1_500.jpg" alt="Electrostatic Force Project">
-			<a href=https://www.khanacademy.org/computer-programming/electrostatic-force/5544610432745472><h2>Javascript + Physics Sandbox</h2></a>
-		</div>
-	</div>
-	<div class="col-sm-1"></div>
-	<div class="col-sm-3">
-		<div id="physicsplug-in">
-		<h2 class= "descriptor-text">Javascript + Physics Sandbox</h2>
-		</div>
-	</div>
-	<div class="col-sm-1"></div>
-	</div>
-</div>
-
-<!--**** CONTACT FOOTER **************************************************************-->
-<footer class="container-fluid bg-4 text-center">
-  <h2 id="contact">Contact:</h2>
-  <p class="margin">jhunt0398@gmail.com</p>
-</footer>
-
+  <!-- <script src="bar_graphic.js"></script>  -->
+  <script src="lightBeams.js"></script>  
 </body>
-
-<script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script>	<!--old: 1.4.8 -->
-<script src="physics.js"></script>
-
 </html>

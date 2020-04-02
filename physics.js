@@ -250,6 +250,18 @@ var sketchProc = function(processingInstance) {
 		        textFont(f35, 40);
 		        fill(0, 0, 0);
 		        text("Electrostatic Force",width/2, height/2);
+		        if (randomButton.inButton()) {
+		            randomButton.color = color(255, 255, 255);
+		        }
+		        else {
+		        	randomButton.color = color(255, 0, 0);
+		        }
+		        if (manualButton.inButton()) {
+		            manualButton.color = color(255, 255, 255);
+		        }
+		        else {
+		        	manualButton.color = color(0, 200, 255);
+		        }
 		    }
 		    else if (scene === 1) {
 		        background(209, 209, 209);

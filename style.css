@@ -1,153 +1,397 @@
-@media (min-width: 200px){
-			.descriptor {
-				justify-content:center;
-				align-items:center;
-				width:100%;
-			}
-			.descriptor-text {
-				font-size: 35px;
-				color: var(--color3);
-			}
-			#physicsplug-in {
-				display: none;
-			}
-			#mobile-div {
-				display: block;
-			}
-		}
-		
-		@media (min-width: 900px) {
-			.descriptor {
-				display:flex;
-				justify-content:center;
-				align-items:center;
-				width:100%;
-			}
+/*Fonts can be included this way or in the <head> tag*/
+@import url('https://fonts.googleapis.com/css?family=Muli');
+/*@import url('https://fonts.googleapis.com/css?family=Montserrat');*/
 
-			.descriptor-text {
-				font-size: 50px;
-				color: var(--color3);
-			}
-			#physicsplug-in {
-				display: block;
-			}
-			#mobile-div {
-				display: none;
-			}
-		}
+/* This code establishes variable names to different colors and is useful for making different themes */
+:root {
+  /*Theme 1: Blue*/
+    /* Sky Blue     var(--color1)  Light Color */
+    /* Slate Gray   var(--color2)  Dark Color  */ 
+    /*Steel Blue    var(--color3) */
+    /* White        var(--color4) */
+    /* Black        var(--color5) */
+    /*I recommend keeping color4 and color5 white and black for all themes*/
+  --color1: #8FBCE5;   
+  --color2: #59606F;  
+  --color3: #6391C3; 
+  --color4: white;   
+  --color5: black;   
 
-		:root {
-			--color1: #8FBCE5; /* Sky Blue     var(--color1)  Light Color */  
-			--color2: #59606F; /* Slate Gray   var(--color2)  Dark Color  */  
-			--color3: #6391C3; /*Steel Blue    var(--color3) */
-			--color4: white;   /* White        var(--color3) */
-			--color5: black;   /* Black        var(--color5) */
-		}
+  /*Theme 2: Coffee Color*/
+/*  --color1: #F0A979;  
+  --color2: #704F50;  
+  --color3: #704F50; 
+  --color4: white;   
+  --color5: black;   */ 
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Muli', sans-serif; /*the second input to font-family is the back-up font*/
+  color: #222;
+  /*color: var(--color2);*/
+}
+
+p a {
+  color: var(--color3);
+}
+
+.navbar {
+  /*single input to padding descriptor applies to all sides of the element*/
+  /* 2 inputs: 1st input: top and bottom, 2nd input: right and left*/
+  padding: 0.8rem 4rem;
+  /* There are two..three..many ways to change the navbar background color:*/
+  /*Make sure your custom style.css file comes after the bootstrap cdn link in the <head>
+    and then... 
+    1. Make a custom class such as .navbar-custom and make sure to include !important at the end
+        of the background-color description
+    2. Override the bg-light class' background-color property and also remember to include 
+        !important at the end (It's important)
+    3. Or simply add a background-color to the .navbar class (remember to include !important)
+
+    ***Ctrl-F "bg-light" in the bootstrap 4 unminified cdn webpage*/
+  background-color: var(--color1) !important;
+  letter-spacing: 5px;
+  color: var(--color2) !important;
+}
+
+.navbar-nav li {
+  padding-right: 1.3rem;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  color: var(--color2) !important;
+}
+
+.nav-link {
+  font-size: 1.4rem;
+}
+
+.nav-item .nav-link:hover, .navbar-brand:hover {
+  color: var(--color4) !important;
+}
+
+canvas {
+  display: block;
+}
+
+/* Used for measuring the scrollbar width*/
+.scrollbar-measure {
+  width: 100px;
+  height: 100px;
+  overflow: scroll;
+  position: absolute;
+  top: -9999px;
+}
+
+#bottomSpacerStatic {
+  background-color: var(--color1);
+  position: static;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+footer {
+  background-color: var(--color2);
+  color: var(--color4);
+  padding-top: 50px;
+  padding-bottom: 85px;
+}
+
+/*about.html css*/
+#about {
+  border-left: 10px solid var(--color2);
+  padding: 0rem 3rem;
+}
+
+#about-box {
+  padding-top: 3rem;
+}
+
+.profile-pic {
+  border-style: solid;
+  border-width: 13px;
+  border-color: var(--color3);
+  width: 100%;
+  max-width: 500px;
+  display: inline;
+}
+
+.profile-pic-padding {
+  padding: 0rem 3rem !important;
+}
+
+#aboutSpacer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#bottomSpacerFixed {
+    background-color: var(--color1);
+    position: fixed;
+    width: 100%;
+    bottom: 0%;
+    padding-bottom: 40px;
+}
+
+h1 {
+  text-shadow: 4px 4px 4px #aaa
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+
+li {
+  font-size: 1.3rem;
+}
+
+/*Projects*/
+.btn-primary {
+  background-color: var(--color3);
+  border: 1px solid var(--color3);
+}
+
+.btn-primary:hover {
+  background-color: var(--color2);
+  border: 1px solid var(--color2);
+  /*background-color: var(--color1);
+  border: 1px solid var(--color1);*/
+}
+
+.card-title {
+  margin: 1rem 1rem 1rem;
+}
+
+.card-body {
+  padding: 0rem;
+}
+
+.card {
+  width: 400px;
+}
+
+.card img {
+  /*position: relative;*/
+  border-radius: 0;
+}
+
+.card .inner {
+  background-color: black;
+}
+
+.project-row {
+  padding: 0rem 5rem;
+}
+
+/*Project Image Zoom + Animation Stuff*/
+/*----------------------------------------*/
+  .inner {
+    overflow: hidden;
+  }
+
+  .inner .btn {
+    position: absolute;
+    top: 35%;
+    left: 32.5%;
+    display: none;
+    font-size: 1.4rem;
+  }
+
+  @keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .inner .btn.animateB {
+    display: flex;
+    animation: fadein 0.5s ease-in;
+  }
+  .inner img {
+    transform: scale(1);
+    transition: all 1s ease;
+    opacity: 1;
+  }
+  .inner img.animate {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+/*----------------------------------------*/
+
+/*Carousels*/
+.carousel {
+  /*border: 1px solid black;*/
+}
+
+.carousel-control-prev-icon {
+ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-image {
+  width: 545px;
+  height: 545px;
+}
+
+/*Project Descriptions on Links*/
+.descriptor {
+  background-color: var(--color2);
+  color: var(--color4);
+  padding: 0.75rem 0.75rem 1.25rem;
+}
+
+/*---Media Queries --*/
+/*-------------------------------------------------*/
+@media (max-width: 992px) {
+  #about {
+    margin: 0rem 2rem;
+    margin-top: 2rem;
+  }
+}
+/*-------------------------------------------------*/
+@media (min-width: 769px) {
+  .card:hover img {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+
+  @keyframes fadein {
+      from { opacity: 0; }
+      to { opacity: 1; }
+  }
+
+  .card:hover .btn {
+    display: block;
+    animation: fadein 0.5s ease-in;
+  }
+}
+/*-------------------------------------------------*/
+@media (max-width: 768px) {
+.display-2 {
+  font-size: 4.5rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+li {
+  font-size: 1.2rem;
+}
+
+/*iPad*/
+.inner .btn {
+  top: 29%;
+  left: 23%;
+}
+
+}
+
+/*-------------------------------------------------*/
+/*-------------------------------------------------*/
+@media (max-width: 576px) {
+.display-2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+li {
+  font-size: 1rem;
+}
+.navbar-brand {
+  font-size: 1.5rem !important;
+  letter-spacing: 0px;
+}
+
+.card {
+  width: 300px;
+}
+
+.project-row {
+  padding: 0rem 2rem;
+}
+
+.carousel-image {
+  max-width: auto;
+  height: auto;
+}
+
+.inner .btn {
+  top: 35%;
+  left: 26%;
+}
+}
 
 
-		body {
-		    font: 20px "Montserrat", sans-serif;
-		    line-height: 1.8;
-		}
+/*iphone 6/7/8*/
+@media (max-width: 377px) {
+  .inner .btn {
+    top: 35%;
+    left: 25%;
+  }
+}
+/*Galaxy S5*/
+@media (max-width: 361px) {
+  .inner .btn {
+    top: 35%;
+    left: 23%;
+  }
+}
 
-		p {font-size: 16px;}
+/*iPhone 5/SE*/
+@media (max-width: 321px) {
+  .inner .btn {
+    top: 35%;
+    left: 18%;
+  }
+}
 
-		h1 {font-size: 75px;}
+/*-------------------------------------------------*/
 
-		.container-fluid {
-			padding-top: 50px;
-			padding-bottom: 50px;
-		}
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
 
-		.bg-1 {
-			background-color: var(--color1);  
-			color: var(--color4);
-		}
-		.bg-2 {
-			background-color: var(--color2); 
-			color: var(--color4);
-		}
-		.bg-3 {
-			background-color: var(--color4); 
-			color: var(--color2);
-		}
-		.bg-4 { 
-		    background-color: var(--color2); 
-		    color: var(--color4);
-		}
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
 
-		.navbar {
-		    padding-top: 15px;
-		    padding-bottom: 15px;
-		    border: 0;
-		    border-radius: 0;
-		    margin-bottom: 0;
-		    font-size: 20px;
-		    letter-spacing: 5px;
-		    color: var(--color2);
-		}
 
-		.navbar-default {
-			background-color: var(--color1);;
-		}
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
 
-		.navbar-brand {
-			font-size: 30px;
-			color: var(--color2) !important;
-		}
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
 
-		.navbar-nav li a {
-		    color: var(--color2) !important;
-		}
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
 
-		.navbar-nav li a:hover {
-		    color: var(--color4) !important;
-		}
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
 
-		.margin {margin-bottom: 45px;}
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
 
 
 
-		.nopad {			
-			padding-top: 0px;
-			padding-bottom: 0px;
-		}
 
-		.nomarg {
-			margin-right: 0px;
-			margin-left: 0px;
-		}
 
-		.pad-only {
-			padding-top: 40px;
-			padding-bottom: 40px;
-		}
 
-		.nopad {			
-			padding-top: 0px;
-			padding-bottom: 0px;
-		}
 
-		.glyphicon {
-			color: black;
-		}
 
-		.carousel-control.right {
-			background-image: none;
-		}
-		.carousel-control.left {
-			background-image: none;
-		}
-
-		.carousel-image {
-			width:100%;
-			height: 545px;
-		}
-
-		.profile-pic {
-			border-style: solid;
-			border-width: 13px;
-			border-color: var(--color3);
-			width: 100%;
-			max-width: 500px;
-		}
