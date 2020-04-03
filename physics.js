@@ -139,8 +139,8 @@ var sketchProc = function(processingInstance) {
 		    var right = new Arrow(0.5475*width, 0.9075*height, 0.075*width, 0.075*height, color(187, 140, 209));
 		    
 		    //Manual UI Buttons
-		    var pButton = new Button(0, 0, 0.05*width, 0.05*height, color(120, 120, 120), "+");
-		    var nButton = new Button(0.95*width, 0, 0.05*width, 0.05*height, color(120, 120, 120), "-");
+		    var pButton = new Button(0, 0, 0.07*width, 0.07*height, color(120, 120, 120), "+");
+		    var nButton = new Button(0.93*width, 0, 0.07*width, 0.07*height, color(120, 120, 120), "-");
 		    var releaseButton = new Button(0.7375*width, 0.9075*height, 0.25*width, 0.075*height, color(187, 140, 209), "RELEASE");
 		    var cancelButton = new Button(0.3125*width, 0.905*height, 0.075*width, 0.075*height, color(120, 120, 120), "X");
 		    var resetButton2 = new Button(0.7875*width, 0.8075*height, 0.2*width, 0.075*height, color(187, 140, 209), "RESET");
