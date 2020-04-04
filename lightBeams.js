@@ -26,7 +26,7 @@ var sketchProc = function(processingInstance) {
         windowH = windowH - navHeight - bottomSpacerH;
         size(windowW, windowH); // Critical to resizing the canvas to the window size
         console.log("Window Width Without Scrollbar: " + windowW)
-
+        console.log("Window Width: " + $(window).width())
 
         frameRate(30); 
         
@@ -44,6 +44,9 @@ var sketchProc = function(processingInstance) {
          	var lineWidth = 2; //In Pixels
          	var r = height/2 - 1/50*height - navHeight; // Radius of circle being drawn
 			// var r = width; // Radius of circle being drawn
+			if ($(window).width() < 450) {
+				r = windowW*0.75/2;
+	 		}
 
 
 			translate(windowW/2, (windowH)/2); // Center the drawing on the middle of the webpage
