@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Jake Million</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!--**** NAVBAR CODE **********************************************************************-->
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">jake million</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">about</a></li>
+          <li class="nav-item"><a class="nav-link" href="proj.html">projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">contact</a></li>
+        </ul>
+      </div>
+  </div>
+  </nav>
+
+  <canvas id="canvas"></canvas>
+
+
+  <!--**** SPACER ROW **************************************************************-->
+  <div class="container-fluid" id="bottomSpacerStatic"></div>
+
+    <!--**** SPACER ROW **************************************************************-->
+  <div class="container-fluid" style="position: static; width: 100%;
+  padding-bottom: 200px;">
+      <div class="container-fluid" id="about-box"> <!-- This ensures that the div takes up the appropriate width of the screen (accounts for scrollbar width) -->
+        <div class="row"> <!-- This ensures all elements in the column divs within this row are centered appropriately: see descriptor class -->
+          <!-- <div class="col-lg-6 scrollspy " data-spy="affix"> -->
+          <div class="col-lg-12">
+            <h3 class="text-center">
+              Thank you for encouraging me to be my best throughout the years, and for encouraging me to seek God's will in my life.  You are an incredible listener which is one of the first steps in my opinion to showing other people Jesus' love.  Thank you for being a great example to look up to in your interactions with others, listening to them, and making <em>your</em> love for them apparent. Your emphasis on the pursuit of truth has also been formative in directing me towards Christ and I thank you for that as well! You have had such a strong impact on the world, especially as a dad.  Happy Birthday! You're the best! <br><br>
+
+              I have listed below some verses which I believe you have followed/lived out/exhibited well in your life and have influenced me to do the same! <br><br>
+
+
+            </h3>
+            <h4>
+              (Ecclesiastes 9:10 Whatever your hand finds to do, do it with all your might)<br><br>
+              (Ecclesiastes 11:6 Sow your seed in the morning, and at evening let your hands not be idle, for you do not know which will succeed, whether this or that, or whether both will do equally well.)<br><br>
+              (Colossians 3:17 And whatever you do, whether in word or deed, do it all in the name of the Lord Jesus, giving thanks to God the Father through him.)<br><br>
+              (John 15:17 This is my command: Love each other)<br><br>
+              (John 18:37 "You are a king then!" said Pilate.  Jesus answered, "You say that I am a king. In fact, the reason I was born and came into the world is to testify to the truth.  Everyone on the side of truth listens to me.")<br><br>
+              (Matthew 20:26-28 "...Instead, whoever wants to become great among you must be your servant, and whoever wants to be first must be your slave - just as the Son of Man did not come to be served, but to serve, and to give his life as a ransom for many.")</h4><br>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <!--**** SPACER ROW **************************************************************-->
+  <div class="container-fluid" id="bottomSpacerStatic"></div>
+
+  <!--**** CONTACT FOOTER **************************************************************-->
+  <footer class="container-fluid text-center">
+    <h2 id="contact">Contact:</h2>
+    <p class="margin"><a href="mailto:jhunt0398@gmail.com">jhunt0398@gmail.com</a></p>
+  </footer>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  
+  <script> 
+    //Jquery Practice Code
+    wHeight = $(window).height()
+    wWidth = $(window).width()
+    $navbar = $(".navbar")
+    console.log("Window Height in Pixels: " + wHeight)
+    console.log("Window Width in Pixels: " + wWidth)
+    console.log("Navbar Height in Pixels: " + $navbar.outerHeight(true))
+  </script>
+
+  <!--old: 1.4.8 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.8/processing.min.js"></script> 
+  <!--new 1.6.6 --> 
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>  -->
+
+  <!-- <script src="bar_graphic.js"></script>  -->
+  <script src="birthdayDad.js"></script>  
+</body>
+</html>
