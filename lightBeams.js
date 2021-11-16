@@ -3,9 +3,8 @@ var sketchProc = function(processingInstance) {
         var navHeight = $(".navbar").outerHeight(true);
         var windowW = $(window).width();
         var windowH = $(window).height();
-        var bottomSpacerH = $("#bottomSpacerStatic").outerHeight(true);
+        var bottomSpacerH = $(".l-page-spacer-x2").outerHeight(true)/2;
         
-
         // Note: jQuery does not have clientWidth or clientWidth() (and clientHeight...) attributes
         // Determine ScrollBar Width; Note the CSS class "scrollbar-measure" in the style.css file
 			// Create the measurement node
@@ -101,9 +100,9 @@ var sketchProc = function(processingInstance) {
 			var step = numSteps;
 
 			// Font Stuff
-			var f35 = createFont("monospace");
-			textFont(f35, 80);
-			textAlign(CENTER, CENTER);
+			// var f35 = createFont("monospace");
+			// textFont(f35, 80);
+			// textAlign(CENTER, CENTER);
 
 			draw = function() {
 			    frameRate(25); // 

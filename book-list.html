@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Jake Million</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="theme.css">
+</head>
+
+<body>
+
+  <!--**** NAVBAR CODE **********************************************************************-->
+  <div id="navbar"></div>
+
+    <!-- **** Books -->
+    <div id="book-list" class="container-fluid">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="main-display-header">Reading List</h1>
+                </div>
+            </div>    
+        </div>
+
+
+        <!-- Initial Marker div for inserting book divs above it -->
+        <div class="container-fluid bookRO"></div>
+    </div>
+
+    <div id=return-to-book-list></div>
+    <div id=book_highlighted></div>
+
+    <div id="pageBottom"></div>
+
+<!-- The order in which scripts are placed is important; for example, my custom lightBeams javascript file uses jquery references therefore it must come after the jquery cdn link -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- Scripts -->
+<script src="scrollBar.js"> </script>
+
+<script>
+    $( "#navbar" ).load( "index.html .navbar" );
+    $( "#pageBottom" ).load( "index.html #pageBottom" );
+</script>
+
+<!-- Project Picker Code -->
+<script src="books.js"></script>
+<script src="bookPicker.js"></script>
+
+</body>
+</html>

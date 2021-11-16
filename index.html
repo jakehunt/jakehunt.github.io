@@ -4,50 +4,58 @@
 	<title>Jake Million</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" 
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+            crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css">
 </head>
 
 <body>
-  <!--**** NAVBAR CODE **********************************************************************-->
-  <nav class="navbar navbar-expand-md navbar-light bg-light">
-  <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">jake million</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">about</a></li>
-          <li class="nav-item"><a class="nav-link" href="proj.html">projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">contact</a></li>
-        </ul>
-      </div>
-  </div>
-  </nav>
+    <!--**** NAVBAR CODE **********************************************************************-->
+    <nav class="navbar navbar-expand-md navbar-light primary-bg secondary-tcolor">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">jake million</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">about</a></li>
+                <li class="nav-item"><a class="nav-link" href="project-list.html">projects</a></li>
+                <li class="nav-item l-medium-hidden"><a class="nav-link" href="book-list.html">books</a></li>
+                <li class="nav-item l-medium-hidden"><a class="nav-link" href="link-list.html">links</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">contact</a></li>
+            </ul>
+        </div>
+    </div>
+    </nav>
 
-  <canvas id="canvas"></canvas>
+
+    <!--**** HOME PAGE CANVAS ELEMENT **********************************************************************-->
+    <canvas id="canvas"></canvas>
 
 
-  <!--**** SPACER ROW **************************************************************-->
-  <div class="container-fluid" id="bottomSpacerStatic"></div>
+    <!--**** Page Bottom (Code used on other pages) ********************************************************-->
+    <div id="pageBottom">
+        <!--**** SPACER ROW **************************************************************-->
+        <div class="container-fluid l-page-spacer-x2 primary-bg"></div>
 
-  <!--**** SPACER ROW **************************************************************-->
-  <div class="container-fluid" id="bottomSpacerStatic"></div>
+        <!--**** CONTACT FOOTER **************************************************************-->
+        <footer class="container-fluid text-center secondary-bg white-tcolor">
+            <h2 id="contact">Contact:</h2>
+            <p class="margin"><a href="mailto:jhunt0398@gmail.com" class="tertiary-tcolor">jhunt0398@gmail.com</a></p>
+        </footer>
+    </div>
 
-  <!--**** CONTACT FOOTER **************************************************************-->
-  <footer class="container-fluid text-center">
-    <h2 id="contact">Contact:</h2>
-    <p class="margin"><a href="mailto:jhunt0398@gmail.com">jhunt0398@gmail.com</a></p>
-  </footer>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  
-  <script> 
+<script> 
     //Jquery Practice Code
     wHeight = $(window).height()
     wWidth = $(window).width()
@@ -55,14 +63,14 @@
     console.log("Window Height in Pixels: " + wHeight)
     console.log("Window Width in Pixels: " + wWidth)
     console.log("Navbar Height in Pixels: " + $navbar.outerHeight(true))
-  </script>
+</script>
 
-  <!--old: 1.4.8 -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.8/processing.min.js"></script> 
-  <!--new 1.6.6 --> 
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>  -->
+<!--old: 1.4.8 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.8/processing.min.js"></script> 
+<!--new 1.6.6 --> 
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>  -->
 
-  <!-- <script src="bar_graphic.js"></script>  -->
-  <script src="lightBeams.js"></script>  
+<!-- <script src="bar_graphic.js"></script>  -->
+<script src="lightBeams.js"></script>  
 </body>
 </html>

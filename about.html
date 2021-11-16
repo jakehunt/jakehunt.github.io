@@ -1,89 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Jake Million</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css">
+    <title>Jake Million</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" 
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+            crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css">
 </head>
 
 <body>
-  <!--**** NAVBAR CODE **********************************************************************-->
-  <nav class="navbar navbar-expand-md navbar-light bg-light">
-  <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">jake million</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">about</a></li>
-          <li class="nav-item"><a class="nav-link" href="proj.html">projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">contact</a></li>
-        </ul>
-      </div>
-  </div>
-  </nav>
 
-  <!-- **** Profile Picture and About Section -->
-  <div class="container-fluid" id="about-box"> <!-- This ensures that the div takes up the appropriate width of the screen (accounts for scrollbar width) -->
-  <div class="row"> <!-- This ensures all elements in the column divs within this row are centered appropriately: see descriptor class -->
-      <!-- <div class="col-lg-6 scrollspy " data-spy="affix"> -->
-      <div class="col-lg-6 text-center profile-pic-padding">
-        <img class="img-fluid rounded-circle profile-pic" src="https://78.media.tumblr.com/44187ee23eab5440f3c05529a0529fa5/tumblr_pdb9ad65mJ1wy52q8o1_1280.jpg"  alt="Real-Profile-Picture">
-      </div>
-      <div class="col-lg-6" id="about">
-        <h1 class="display-2">ABOUT</h1>
-        <h3> My name is Jake Hunt! <br>
-        Here are some things that describe me:</h3>
-          <ul>
-            <li><small> I am a 4th year Mechanical Engineering Major at Georgia Tech</small></li>
-            <!-- <li><small> My love for engineering is <strong>three</strong>-part: a love for design, math, and how things work</small></li> -->
-            <li><small> My love for engineering is <strong>three</strong>-part: a love for design, math, and how things work</small></li>
-            <!-- 
-            <ol>
-              <li><small> <strong>Design: </strong>I credit this love to an extensive childhood of LEGO-building</small></li>
-              <li><small> <strong>Math: </strong>This love is probably due to my discovery that perfection can be achieved in the constant, reassuring field of numbers</small></li>
-              <li><small> <strong>How things work: </strong>I find joy in learning things that the people around me take for granted</small></li>
-            </ol>
-             -->
-            <li><small> If you want to know where I am, I am probably in Georgia </small></li>
-            <li><small> If you want to know where I want to be, I would be skiing in Winterpark, Colorado</small></li>
-            <li><small> My middle name is Million, hence the url</small></li>
-            <li><small> The universe doesn't make sense to me without Jesus</small></li>
-            <li><small> If you would like to see my resum&eacute;, feel free to send me an email!</small></li>
-            <!-- <li><small>Add Words Here!! </small></li> -->
-          </ul>
-      </div>
-  </div>
-  </div>
+    <!--**** NAVBAR CODE **********************************************************************-->
+    <div id="navbar"></div>
+
+    <!-- **** Profile Picture and About Section -->
+    <div class="container-fluid l-page-spacer white-bg"></div>
+    <div class="container-fluid"> <!-- This ensures that the div takes up the appropriate width of the screen (accounts for scrollbar width) -->
+    <div class="row"> <!-- This ensures all elements in the column divs within this row are centered appropriately: see descriptor class -->
+        <!-- <div class="col-lg-6 scrollspy " data-spy="affix"> -->
+        <div class="col-lg-6 text-center profile-pic-padding">
+            <img class="img-fluid rounded-circle" 
+                 id="about-profile-pic"
+                 src="https://78.media.tumblr.com/44187ee23eab5440f3c05529a0529fa5/tumblr_pdb9ad65mJ1wy52q8o1_1280.jpg"  
+                 alt="Real-Profile-Picture">
+        </div>
+
+        <div class="col-lg-6 l-border l-border-color-secondary" id="about-main-description">
+            <h1 class="main-display-header">ABOUT</h1>
+            <h3> My name is Jake Hunt! <br>
+            Here are some things that describe me:</h3>
+            <ul>
+                <li><small> This is my first year in the real world.</small></li>
+                <!-- <li><small> My love for engineering is <strong>three</strong>-part: a love for design, math, and how things work</small></li> -->
+                <li><small> My love for engineering is <strong>three</strong>-part: a love for design, math, and how things work</small></li>
+                <!--   <ol>
+                <li><small> <strong>Design: </strong>I credit this love to an extensive childhood of LEGO-building</small></li>
+                <li><small> <strong>Math: </strong>This love is probably due to my discovery that perfection can be achieved in the constant, reassuring field of numbers</small></li>
+                <li><small> <strong>How things work: </strong>I find joy in learning things that the people around me take for granted</small></li>
+                </ol> -->
+
+                <li><small> If you want to know where I am, I am probably in Georgia </small></li>
+                <li><small> If you want to know where I want to be, I would be skiing in Winterpark, Colorado</small></li>
+                <li><small> Million is a family name.</small></li>
+                <li><small> The universe doesn't make sense to me without Jesus</small></li>
+                <!-- <li><small> If you would like to see my resum&eacute;, feel free to send me an email!</small></li> -->
+                <!-- <li><small>Add Words Here!! </small></li> -->
+            </ul>
+        </div>
+    </div>
+    </div>
 
     <!--**** SPACER ROW **************************************************************-->
-  <div class="container-fluid" id="aboutSpacer"></div>
+    <div class="container-fluid l-page-spacer-x2 white-bg"></div>
 
-  <!--**** SPACER ROW **************************************************************-->
-  <div class="container-fluid" id="bottomSpacerStatic"></div> <!-- replace id with bottomSpacerFixed and uncomment the scrollBar.js at the bottom -->
+    <!--**** SPACER ROW ******************-->
+    <div class="container-fluid l-page-spacer-x2 primary-bg"></div>
 
     <!--**** SPACER ROW **************************************************************-->
-  <div class="container-fluid" id="bottomSpacerStatic"></div>
+    <div class="container-fluid l-page-spacer l-hidden-phone white-bg"></div>
 
-  <!--**** CONTACT FOOTER **************************************************************-->
-  <footer class="container-fluid text-center">
-    <h2 id="contact">Contact:</h2>
-    <p class="margin"><a href="mailto:jhunt0398@gmail.com">jhunt0398@gmail.com</a></p>
-  </footer>
+    <!-- **** Interesting List & "Book Reviews" -->
+    <div class="container-fluid"> <!-- This ensures that the div takes up the appropriate width of the screen (accounts for scrollbar width) -->
+    <div class="row"> <!-- This ensures all elements in the column divs within this row are centered appropriately: see descriptor class -->
+            <!-- <div class="col-lg-6 scrollspy " data-spy="affix"> -->
+
+        <!-- Interesting List -->
+        <div class="col-lg-6">
+            <div class = "row">
+                <div class="col-lg-12 text-center">
+                    <h3>List of Interesting Links</h3>
+                    <div class="container-fluid l-spacer white-bg"></div>
+                    <h5><a href="link-list.html">See all &#8594;</a></h5>
+                </div>
+            </div>
+            <a href=""></a>
+
+            <!-- This div gets populated with the latest Link html info using the latestPicker.js file -->
+            <div id="latestLink"></div>
+
+        </div>
+
+        <!-- These two divs are only shown on phone screens to add spacing between the link and book sections -->
+        <div class="container-fluid l-big-screen-hidden l-page-spacer-x2 white-bg"></div>
+        <div class="container-fluid l-big-screen-hidden l-spacer-7px secondary-bg"></div>
+
+        <!-- Book Reviews -->
+        <div class="col-lg-6 l-border-left-10px l-border-color-secondary">
+            <div class = "row">
+                <div class="col-lg-12 text-center">
+                    <h3>Reading List</h3>
+                    <div class="container-fluid l-spacer white-bg"></div>
+                    <h5><a href="book-list.html">See all &#8594;</a></h5>
+                </div>
+            </div>
+
+            <!-- This div gets populated with the latest Book html info using the latestPicker.js file -->
+            <div id="latestBook"></div>
+
+        </div>     
+
+    </div>
+    </div>
+
+    <!--**** SPACER ROW **************************************************************-->
+    <div class="container-fluid l-page-spacer-x2 white-bg"></div>
+
+    <div id="pageBottom"></div>
 
 
+          
 
-  <!-- The order in which scripts are placed is important; for example, my custom lightBeams javascript file uses jquery references therefore it must come after the jquery cdn link -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Scripts -->
+<!-- The order in which scripts are placed is important; for example, my custom lightBeams javascript file uses jquery references therefore it must come after the jquery cdn link -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-  <!-- Scripts -->
-  <!-- <script src="scrollBar.js"> </script> -->
+<script>
+    $( "#navbar" ).load( "index.html .navbar" );
+    $( "#pageBottom" ).load( "index.html #pageBottom" );
+</script>
+
+<script src="books.js"></script>
+<script src="links.js"></script>
+<script src="latestPicker.js"></script>
+
 </body>
 </html>

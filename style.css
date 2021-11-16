@@ -2,138 +2,72 @@
 @import url('https://fonts.googleapis.com/css?family=Muli');
 /*@import url('https://fonts.googleapis.com/css?family=Montserrat');*/
 
-/* This code establishes variable names to different colors and is useful for making different themes */
-:root {
-  /*Theme 1: Blue*/
-    /* Sky Blue     var(--color1)  Light Color */
-    /* Slate Gray   var(--color2)  Dark Color  */ 
-    /*Steel Blue    var(--color3) */
-    /* White        var(--color4) */
-    /* Black        var(--color5) */
-    /*I recommend keeping color4 and color5 white and black for all themes*/
-  --color1: #8FBCE5;   
-  --color2: #59606F;  
-  --color3: #6391C3; 
-  --color4: white;   
-  --color5: black;   
+/* SMACCS CSS Organization style used: http://smacss.com/book/categorizing*/
+/* This system of organization categorizes each styling rule under 5 categories:
+1. Base Rules
+2. Layout Rules
+3. Module Rules
+4. State Rules
+5. Theme Rules */
 
-  /*Theme 2: Coffee Color*/
-/*  --color1: #F0A979;  
-  --color2: #704F50;  
-  --color3: #704F50; 
-  --color4: white;   
-  --color5: black;   */ 
+/*Bootstrap Classes used (refer to documentation at https://getbootstrap.com/docs/4.0/getting-started/introduction/):
+
+//GENERAL BS4 CLASSES
+.container-fluid
+.ml-auto
+.bg-light
+.rounded
+
+//BS4 NAVBAR CLASSES
+.navbar
+.navbar-expand-md 
+.navbar-light 
+.navbar-dark
+.navbar-brand
+.navbar-toggler
+.navbar-toggler-icon
+.collapse
+.navbar-collapse
+.navbar-nav
+.nav-item
+.nav-link
+
+
+
+
+*/
+
+/* This code, while not populated with anything inside it, must remain here or else the ajax loaded project pages will not display correctly */
+:root {
 }
+
+
+/* DO NOT ADD ANY RULES BEFORE THIS RULE*/
+#project-list { /*2*/
+  display: block;
+}
+
+#book-list { /*2*/
+  display: block;
+}
+
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+/*Base Rules*/
 
 html, body {
   height: 100%;
   width: 100%;
   font-family: 'Muli', sans-serif; /*the second input to font-family is the back-up font*/
-  color: #222;
-  /*color: var(--color2);*/
-}
-
-p a {
-  color: var(--color3);
-}
-
-.navbar {
-  /*single input to padding descriptor applies to all sides of the element*/
-  /* 2 inputs: 1st input: top and bottom, 2nd input: right and left*/
-  padding: 0.8rem 4rem;
-  /* There are two..three..many ways to change the navbar background color:*/
-  /*Make sure your custom style.css file comes after the bootstrap cdn link in the <head>
-    and then... 
-    1. Make a custom class such as .navbar-custom and make sure to include !important at the end
-        of the background-color description
-    2. Override the bg-light class' background-color property and also remember to include 
-        !important at the end (It's important)
-    3. Or simply add a background-color to the .navbar class (remember to include !important)
-
-    ***Ctrl-F "bg-light" in the bootstrap 4 unminified cdn webpage*/
-  background-color: var(--color1) !important;
-  letter-spacing: 5px;
-  color: var(--color2) !important;
-}
-
-.navbar-nav li {
-  padding-right: 1.3rem;
-}
-
-.navbar-brand {
-  font-size: 2rem;
-  color: var(--color2) !important;
-}
-
-.nav-link {
-  font-size: 1.4rem;
-}
-
-.nav-item .nav-link:hover, .navbar-brand:hover {
-  color: var(--color4) !important;
-}
-
-canvas {
-  display: block;
-}
-
-/* Used for measuring the scrollbar width*/
-.scrollbar-measure {
-  width: 100px;
-  height: 100px;
-  overflow: scroll;
-  position: absolute;
-  top: -9999px;
-}
-
-#bottomSpacerStatic {
-  background-color: var(--color1);
-  position: static;
-  width: 100%;
-  padding-bottom: 40px;
+  color: #222; /* Put explanation here once you understand why you put this rule here*/
 }
 
 footer {
-  background-color: var(--color2);
-  color: var(--color4);
   padding-top: 50px;
   padding-bottom: 85px;
 }
 
-/*about.html css*/
-#about {
-  border-left: 10px solid var(--color2);
-  padding: 0rem 3rem;
-}
-
-#about-box {
-  padding-top: 3rem;
-}
-
-.profile-pic {
-  border-style: solid;
-  border-width: 13px;
-  border-color: var(--color3);
-  width: 100%;
-  max-width: 500px;
-  display: inline;
-}
-
-.profile-pic-padding {
-  padding: 0rem 3rem !important;
-}
-
-#aboutSpacer {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-#bottomSpacerFixed {
-    background-color: var(--color1);
-    position: fixed;
-    width: 100%;
-    bottom: 0%;
-    padding-bottom: 40px;
+canvas {
+  display: block;
 }
 
 h1 {
@@ -149,17 +83,180 @@ li {
   font-size: 1.3rem;
 }
 
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+/* Layout Rules*/
+.l-big-screen-hidden {
+  display: none;
+}
+
+.l-float-right {
+  float: right;
+}
+
+.l-page-spacer {
+  padding: 20px 0px;
+}
+
+.l-page-spacer-x2 {
+  padding: 40px 0px;
+}
+
+.l-spacer {
+  padding: 5px 0px;
+}
+
+.l-spacer-7px {
+  padding: 7px 0px;
+}
+
+.l-border-left-10px {
+  border-left: 10px solid;
+}
+
+/* This rule is used to hide elements on small and medium devices (used on the book and link nav items on the navbar)*/
+.l-medium-hidden {
+    display: block;
+}
+
+.l-remove-bottom-margin {
+  margin-bottom: 0px !important;
+}
+
+.l-remove-top-padding {
+  padding-top: 0px !important;
+}
+
+
+
+.l-vertical-center {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+/* Module Rules*/
+
+/*******************************/
+/*NAVBAR*/
+/*******************************/
+
+.navbar {
+  /*single input to padding descriptor applies to all sides of the element*/
+  /* 2 inputs: 1st input: top and bottom, 2nd input: right and left*/
+  padding: 0.8rem 4rem;
+  letter-spacing: 5px;
+  /* There are two..three..many ways to change the navbar background color:*/
+  /*Make sure your custom style.css file comes after the bootstrap cdn link in the <head>
+    and then... 
+    1. Classes .bg-light and/or .bg-dark classes are NOT used
+      a. Cleanest way: Make a custom class such as .primary-bg (this is what is implemented on this webpage);
+         Then handle link hover and focusing in your own classes.
+    2. Classes .bg-light and/or .bg-dark ARE used (You would do this if you don't want to handle the link & button
+        hover and focus commands yourself).  The following two options involve overriding the .bg-light background color
+      a. Simply add a background-color to the .navbar class and include !important
+      b. Override background-color property by typing in 'bg-light' as a class
+         on this stylesheet and also remember to include !important at the end (It's important)
+
+    ***Ctrl-F "bg-light" in the bootstrap 4 unminified cdn webpage*/
+}
+
+.navbar-nav li {
+  padding-right: 1.3rem;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+}
+
+.nav-link {
+  font-size: 1.4rem;
+}
+
+
+/*******************************/
+/*Carousels*/
+/*******************************/
+
+.carousel {
+  /*border: 1px solid black;*/
+}
+
+.carousel-control-prev-icon {
+ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-image {
+  width: 545px;
+  height: 545px;
+}
+
+/*******************************/
+/*SCROLLBAR*/
+/*******************************/
+
+/* Used for measuring the scrollbar width*/
+.scrollbar-measure {
+  width: 100px;
+  height: 100px;
+  overflow: scroll;
+  position: absolute;
+  top: -9999px;
+}
+
+/*******************************/
+/*about.html*/
+/*******************************/
+
+#about-main-description {
+  padding: 0rem 3rem;
+}
+
+#about-profile-pic {
+  border-style: solid;
+  border-width: 13px;
+  width: 100%;
+  max-width: 500px;
+  display: inline;
+}
+
+.profile-pic-padding {
+  padding: 0rem 3rem !important;
+}
+
+.book-cover-image {
+  width: 80px;
+}
+
+.book-cover-review-image {
+  width: 200px;
+}
+
+.tab { 
+  text-indent: 40px; 
+}
+
+#seeall {
+   line-height: 34px;
+}
+
+
+/*******************************/
 /*Projects*/
+/*******************************/
+
+
+
 .btn-primary {
-  background-color: var(--color3);
-  border: 1px solid var(--color3);
+  border: 1px solid;
 }
 
 .btn-primary:hover {
-  background-color: var(--color2);
-  border: 1px solid var(--color2);
-  /*background-color: var(--color1);
-  border: 1px solid var(--color1);*/
+  border: 1px solid;
 }
 
 .card-title {
@@ -179,13 +276,28 @@ li {
   border-radius: 0;
 }
 
-.card .inner {
-  background-color: black;
-}
-
 .project-row {
   padding: 0rem 5rem;
 }
+
+.container-video {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 
 /*Project Image Zoom + Animation Stuff*/
 /*----------------------------------------*/
@@ -195,12 +307,30 @@ li {
 
   .inner .btn {
     position: absolute;
-    top: 35%;
-    left: 32.5%;
+    top: 40%;
+    left: 33%;
+/*    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);*/
     display: none;
     font-size: 1.4rem;
   }
 
+/*  .inner .btn {
+    position: absolute;
+    top: 35%;
+    left: 32.5%;
+    display: none;
+    font-size: 1.4rem;
+  }*/
+
+/*.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+*/
   @keyframes fadein {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -218,43 +348,34 @@ li {
     transform: scale(1.5);
     opacity: 0.5;
   }
-/*----------------------------------------*/
 
-/*Carousels*/
-.carousel {
-  /*border: 1px solid black;*/
-}
-
-.carousel-control-prev-icon {
- background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
-}
-
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
-}
-
-.carousel-image {
-  width: 545px;
-  height: 545px;
-}
 
 /*Project Descriptions on Links*/
-.descriptor {
-  background-color: var(--color2);
-  color: var(--color4);
+.project-description {
   padding: 0.75rem 0.75rem 1.25rem;
 }
 
 /*---Media Queries --*/
+/*This media query is just for the navigation bar*/
+@media (max-width: 1090px) {
+  .l-medium-hidden {
+    display: none;
+  }
+}
+
 /*-------------------------------------------------*/
 @media (max-width: 992px) {
-  #about {
+  #about-main-description {
     margin: 0rem 2rem;
     margin-top: 2rem;
   }
 }
 /*-------------------------------------------------*/
 @media (min-width: 769px) {
+  .main-display-header {
+    font-size: 5.5rem;
+  }
+
   .card:hover img {
     transform: scale(1.5);
     opacity: 0.5;
@@ -269,10 +390,14 @@ li {
     display: block;
     animation: fadein 0.5s ease-in;
   }
+
+/*  .l-medium-hidden {
+    display: none;
+  }*/
 }
 /*-------------------------------------------------*/
 @media (max-width: 768px) {
-.display-2 {
+.main-display-header {
   font-size: 4.5rem;
 }
 
@@ -288,6 +413,22 @@ li {
 .inner .btn {
   top: 29%;
   left: 23%;
+/*  -ms-transform: translate(0%,0%);
+  transform: translate(0%, 0%);
+*/
+}
+
+.book-cover-review-image {
+  width: 130px;
+}
+
+.l-medium-hidden {
+    display: block;
+}
+
+.remove-side-padding {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 
 }
@@ -295,7 +436,7 @@ li {
 /*-------------------------------------------------*/
 /*-------------------------------------------------*/
 @media (max-width: 576px) {
-.display-2 {
+.main-display-header {
   font-size: 3rem;
 }
 
@@ -303,11 +444,37 @@ h3 {
   font-size: 1.2rem;
 }
 
+h5 {
+  font-size: 0.8rem !important;
+}
+
+h4 {
+  font-size: 0.9rem !important;
+}
+
+h4 > a {
+  font-size: 1.1rem !important;
+}
+
+h5 > a {
+  font-size: 1.1rem !important;
+}
+
 li {
   font-size: 1rem;
 }
 
-#about {
+/*Layout Rules*/
+.l-hidden-phone {
+  display: none;
+}
+
+.l-big-screen-hidden {
+  display: block;
+}
+
+/* Others*/
+#about-main-description {
   padding: 0rem 1rem;
   margin: 0rem 1rem;
 }
@@ -334,6 +501,16 @@ li {
   top: 35%;
   left: 26%;
 }
+
+.remove-side-padding {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.remove-top-padding {
+  padding-top: 0px !important;
+}
+
 }
 
 

@@ -1,0 +1,103 @@
+/*Theme file
+Contains all color styling and font styling*/
+
+/* This code establishes variable names to different colors and is useful for making different themes */
+:root {
+  /*Theme 1: Blue*/
+    /* Sky Blue     var(--color1)  Light Color */
+    /* Slate Gray   var(--color2)  Dark Color  */ 
+    /*Steel Blue    var(--color3) */
+    /* White        var(--color4) */
+    /* Black        var(--color5) */
+    /*I recommend keeping color4 and color5 white and black for all themes*/
+  --color1: #8FBCE5;   
+  --color2: #59606F;  
+  --color3: #6391C3; 
+  --color4: white;   
+  --color5: black;   
+
+  /*Theme 2: Coffee Color*/
+/*  --color1: #F0A979;  
+  --color2: #704F50;  
+  --color3: #704F50; 
+  --color4: white;   
+  --color5: black;   */ 
+}
+
+html, body {
+  font-family: 'Muli', sans-serif; /*the second input to font-family is the back-up font*/
+  color: #222;
+}
+
+/*Background Color Rules*/
+.primary-bg {background-color: var(--color1);}
+.secondary-bg {background-color: var(--color2);}
+.tertiary-bg {background-color: var(--color3);}
+.white-bg {background-color: var(--color4);}
+.black-bg {background-color: var(--color5);}
+
+/*Text Color Rules*/
+.primary-tcolor {color: var(--color1);}
+.secondary-tcolor {color: var(--color2);}
+.tertiary-tcolor {color: var(--color3);}
+.white-tcolor {color: var(--color4);}
+.black-tcolor {color: var(--color5);}
+
+/*Naughty NavBar Color Rules*/
+.navbar-brand {
+  color: var(--color2) !important;
+}
+
+.nav-link:hover, .navbar-brand:hover {
+  color: var(--color4) !important;
+}
+
+/* Layout */
+.l-border-color-secondary {
+  border-color: var(--color2);
+}
+
+/* About Page */
+#about-profile-pic {
+  border-color: var(--color3);
+}
+
+/* Reading List Page*/
+#book-column {
+  background-color: var(--color1)
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--color3);
+  border-color: var(--color3);
+}
+
+.btn-primary:hover {
+  background-color: var(--color2);
+  border-color: var(--color2);
+  /*background-color: var(--color1);
+  border: 1px solid var(--color1);*/
+}
+
+.btn-primary:active {
+  background-color: var(--color1) !important; 
+}
+
+/* Project Cards*/
+.card .inner {
+  background-color: black;
+}
+
+/* Project Page Descriptions*/
+.project-description {
+  background-color: var(--color2);
+  color: var(--color4);
+}
+
+@media (max-width: 576px) {
+.l-border-color-secondary {
+    border-color: var(--color4);
+}
+
+}
