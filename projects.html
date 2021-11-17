@@ -272,7 +272,7 @@
                 <p><strong>Description:</strong></p> <br>
                 <p class="tab">This project improves on the concept of multiplexing. To understand multiplexing, you must first understand 7-segment displays.  In this project, I used a 4-digit, 7-segment LED display.  Spoiler alert: only one segment of a digit is being displayed at a time! </p>
                 <p class="tab"> If the arduino was instructed to light up all 4 digits at a time, they would appear very dim because it's running on a 5 volt circuit (a low voltage), and has low current output.  The first improvement on this problem is to light up only 1 digit at a time, thus making each digit appear brighter while cycling through at a frequency faster than human perception. This is multiplexing. </p>
-                <p class="tab"> However, in multiplexing, the arduino in instructed to light up an entire digit at a time. This causes displayed digits which use more segments (like '8') to appear more dim than digits with less segments (like '1').  This is due to the same amount of electrical power/current being utilized for the entire digit.  To fix this, one must not only cycle the digits, but also the segments of the digits.  This is charlieplexing.  In this implementation, a segment lights up once every 300 microseconds which correlates to a display frequency of 3333.33 Hz.
+                <p class="tab"> However, in multiplexing, the arduino is instructed to light up an entire digit at a time. This causes displayed digits which use more segments (like '8') to appear more dim than digits with less segments (like '1').  This is due to the same amount of electrical power/current being utilized for the entire digit.  To fix this, one must not only cycle the digits, but also the segments of the digits.  This is charlieplexing.  In this implementation, a segment lights up once every 300 microseconds which correlates to a display frequency of 3333.33 Hz.
                 </p>
                 <p class="tab">To better see the reality of how the segments are being displayed, I added a button that changes the delay to 50 milliseconds which can be perceived by the human eye. See the video at bottom of page for reference.  You'll notice that the single segment appears brighter.  The problem with both multiplexing and charlieplexing is that as the delay time is decreased in the for loop between lighting up segments, the segments and digits appear dimmer.  The only fix that I know of for this is to run the clock on a circuit which can deliver a higher current.  If any reader sees this and knows another fix, send me an email!</p>
                 <p class="tab">Lastly, the system is able run autonomously plugged into the wall away from the computer because of the DS3231 clock module.</p>  
@@ -296,6 +296,342 @@
                 <div class="container-video">
                     <iframe class="responsive-iframe" src="https://www.youtube.com/embed/QWvR95ScdrE"></iframe>
                 </div>
+            </div>
+        </div>
+        </div> 
+
+        <!--**** SPACER ROW **************************************************************-->
+        <div class="container-fluid l-page-spacer-x2 white-bg"></div>
+
+        <div class="container">
+        <div class="row"><h3>Project Code</h3></div>
+        <div class="row">
+            <div class="col-12">
+                <pre>
+                <code>
+/*
+    A
+   ---
+F |   | B
+  | G |
+   ---
+E |   | C
+  |   |
+   ---
+    D
+*/
+
+#include <Wire.h>
+#include <DS3231.h>
+#include <Bounce2.h>
+
+DS3231 clock(SDA, SCL);
+Time  t;
+String time_string = __TIME__;
+
+//
+//
+//Delay variable to delay between lighting up each digit
+int del = 300;
+//
+//
+
+int delBoot = 50;    
+boolean flag = false;
+boolean flag2 = false;
+
+int minute1 = 0;
+int minute2 = 0;
+
+int hour1 = 0;
+int hour2 = 0;
+int hour = 0;
+int n = 0;
+
+byte charlie = 0;
+
+// connect to the DS (pin 14) of 74HC595 (pin 4)
+int dataPin = 4;
+// connect to the ST_CP (pin 12) of 74HC595 (pin 5,latch pin)
+int latchPin = 5;
+// connect to the SH_CP (pin 11) of 74HC595 (pin 6, clock pin)
+int clockPin = 6;
+
+int digit1 = 8;
+int digit2 = 9;
+int digit3 = 10;
+int digit4 = 11;
+
+const int button = 2;   //Attach button wire to pin 2
+int value = 0;
+
+Bounce debouncer = Bounce(); 
+
+byte seven_seg_digits[10][7] = {
+ { B10000000,    // Zero
+   B01000000,
+   B00100000,
+   B00010000,
+   B00001000,
+   B00000100},
+   
+ { B01000000,    // One
+   B00100000},
+  
+ { B10000000,    //Two
+   B01000000,
+   B00010000,
+   B00001000,
+   B00000010},
+   
+  {B10000000,    //Three
+   B01000000,
+   B00100000,
+   B00010000,
+   B00000010},
+   
+ { B01000000,    //Four
+   B00100000,
+   B00000100,
+   B00000010},
+   
+{  B10000000,    //Five
+   B00100000,
+   B00010000,
+   B00000100,
+   B00000010},
+   
+  { B10000000,   //Six
+    B00100000,
+    B00010000,
+    B00001000,
+    B00000100,
+    B00000010},
+    
+  { B10000000,   //Seven
+    B01000000,
+    B00100000},
+    
+  { B10000000,   //Eight
+    B01000000, 
+    B00100000,
+    B00010000,
+    B00001000,
+    B00000100,
+    B00000010},
+
+  { B10000000,   //Nine
+    B01000000,
+    B00100000,
+    B00000100,
+    B00000010}
+};
+
+void bootup() {
+    digitizer(B10000000, 1);                //A: B10000000
+    digitizer(B00000100, 1);                //B: B01000000   
+    digitizer(B00001000, 1);                //C: B00100000
+    digitizer(B00010000, 1);                //D: B00010000
+    digitizer(B00010000, 2);                //E: B00001000
+    digitizer(B00010000, 3);                //F: B00000100
+    digitizer(B00010000, 4);                //G: B00000010
+    digitizer(B00100000, 4);
+    digitizer(B01000000, 4);
+    digitizer(B10000000, 4);
+    digitizer(B10000000, 3);
+    digitizer(B10000000, 2);
+    digitizer(B10000000, 1);                
+    digitizer(B00000100, 1);                  
+    digitizer(B00001000, 1);                
+    digitizer(B00010000, 1);             
+    digitizer(B00010000, 2);               
+    digitizer(B00010000, 3);               
+    digitizer(B00010000, 4);                
+    digitizer(B00100000, 4);
+    digitizer(B01000000, 4);
+    digitizer(B10000000, 4);
+    digitizer(B10000000, 3);
+    digitizer(B10000000, 2);
+    digitizer(B10000000, 1);               
+    digitizer(B00000100, 1);  
+    digitizer(B00000010, 1);
+    digitizer(B00000010, 2);
+    digitizer(B00000010, 3);
+    digitizer(B00000010, 4);
+    digitizer(B01000000, 4);
+
+    digitizer(B10000000, 4);
+    digitizer(B00000100, 4);
+    digitizer(B00001000, 4);
+    digitizer(B00100000, 3);
+    digitizer(B01000000, 3);
+    digitizer(B10000000, 3);
+    digitizer(B00000100, 3);
+    digitizer(B00001000, 3);
+    digitizer(B00100000, 2);
+    digitizer(B01000000, 2);
+    digitizer(B10000000, 2);
+    digitizer(B00000100, 2);
+    digitizer(B00001000, 2);
+    digitizer(B00100000, 1);
+    digitizer(B01000000, 1);
+    digitizer(B10000000, 1);
+    digitizer(B00000100, 1);
+    digitizer(B00000010, 1);
+    digitizer(B00000010, 2);
+    digitizer(B00000010, 3);
+    digitizer(B00000010, 4);
+    digitizer(B01000000, 4);
+}
+
+void digitizer(byte led, int digit) {
+    sevenSegWrite(led);
+    digitalWrite(digit + 7, LOW);
+    delay(delBoot);
+    digitalWrite(digit + 7, HIGH);
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////
+void setup() {
+    Serial.begin(9600);
+    while (!Serial); //Wait for Serial Monitor to connect to Arduino
+
+    // Initialize DS3231
+    Serial.println("Initialize DS3231");
+    clock.begin();
+
+    // Set sketch compiling time
+    int h = time_string.substring(0, 2).toInt();
+    int m = time_string.substring(3, 5).toInt();
+//    clock.setTime(h,m,0);    // SIMPLY UNCOMMENT THIS LINE OF CODE AND UPLOAD TO ARDUINO WHILE CONNECTED TO RTC MODULE.  
+//    IT WILL SYNC THE CORRECT TIME USING THE DS3231 LIBRARY AND THE FUNCTION setTime
+
+    ////////////////////////////////////
+    // COMMENT THIS IF NOT USING A BUTTON
+    ///////////////////////////////////
+
+    // Refer to picture, and button datasheet; attach A side of button to ground and 
+    // attach B side of button to interrupt pin (pin D2)
+    pinMode(button, INPUT_PULLUP);       
+
+    // There are 2 interrupt pins on the arduino: D2 and D3.  
+    // Putting a 0 in the first field correlates to D2 and 1 correlates to D3.   
+    attachInterrupt(0, goFast, FALLING);        
+    ///////////////////////////////////
+    //////////////////////////////////
+
+    // After setting up the button, setup the Bounce instance :
+    debouncer.attach(button);
+    debouncer.interval(5); // interval in ms
+    
+        
+    pinMode(latchPin, OUTPUT);
+    pinMode(clockPin, OUTPUT);
+    pinMode(dataPin, OUTPUT);
+    pinMode(digit1, OUTPUT);
+    pinMode(digit2, OUTPUT);
+    pinMode(digit3, OUTPUT);
+    pinMode(digit4, OUTPUT);
+    
+    digitalWrite(digit1, HIGH);
+    digitalWrite(digit2, HIGH);
+    digitalWrite(digit3, HIGH);
+    digitalWrite(digit4, HIGH);
+    bootup();
+}
+
+void goFast() {
+  
+  // Update the Bounce instance :
+  debouncer.update();
+
+  // Get the updated value :
+  int value = debouncer.read();
+  Serial.println(value);
+  if (flag2 == false) {
+      flag2 = true;
+      del = 50;
+  }
+  else if (flag2 == true) {
+      flag2 = false;
+      del = 300;
+  }
+}
+
+
+void charliePlex(int digit, int place) {
+    n = 7;  //length of each digit array within seven_seg_digits array;
+    for (int  i = n; i > 0; i--) {
+        sevenSegWrite(seven_seg_digits[digit][i-1]); 
+        digitalWrite(place + 7, LOW);
+        if (flag2) {
+            delay(del);
+        }
+        else {
+            delayMicroseconds(del);
+        }
+        digitalWrite(place + 7, HIGH);
+    }
+}
+
+void sevenSegWrite(byte number) {
+  // set the latchPin to low potential, before sending data
+  digitalWrite(latchPin, LOW);
+     
+  // the original data (bit pattern)
+  shiftOut(dataPin, clockPin, LSBFIRST, number);  
+
+  // set the latchPin to high potential, after sending data
+  digitalWrite(latchPin, HIGH);
+}
+
+void loop() {
+      t = clock.getTime();
+      minute1 = (t.min / 10U) % 10;
+      minute2 = (t.min / 1U) % 10;
+  
+      if (t.hour > 12) {
+          hour = t.hour - 12;
+      }
+      else if (t.hour < 1) {
+          hour = 12;
+      }
+      else {
+          hour = t.hour;
+      }
+
+      if (hour > 9) {
+          flag = true;
+          hour1 = (hour / 10U) % 10;
+          hour2 = (hour / 1U) % 10;
+      }
+      else {
+          flag = false;
+          hour2 = hour;
+      }
+          
+      if (flag) {
+          charliePlex(hour1, 1);
+          digitalWrite(digit1, LOW);
+      }
+      else {
+          digitalWrite(digit1, HIGH);
+      }                    
+      digitalWrite(digit1, HIGH);
+      charliePlex(hour2, 2);
+      digitalWrite(digit2, LOW);
+            
+      digitalWrite(digit2, HIGH);
+      charliePlex(minute1, 3);
+      digitalWrite(digit3, LOW);
+      
+      digitalWrite(digit3, HIGH);
+      charliePlex(minute2, 4);
+      digitalWrite(digit4, LOW);
+      digitalWrite(digit4, HIGH);
+}</code></pre>
             </div>
         </div>
         </div> 

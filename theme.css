@@ -29,6 +29,11 @@ html, body {
   color: #222;
 }
 
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+}
+
 /*Background Color Rules*/
 .primary-bg {background-color: var(--color1);}
 .secondary-bg {background-color: var(--color2);}
