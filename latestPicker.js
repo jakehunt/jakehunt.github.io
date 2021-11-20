@@ -3,8 +3,11 @@ var latestBookObject = books[books.length-1];
 var latestLinkObject = links[links.length-1];
 
 var aboutPage_LatestBookInfo = `<div class="row">
-					                <div class="col-lg-12">
-					                    <h5 class="tab"><strong>Latest Read:</strong><i> `+ latestBookObject.title +`</i></h5>
+									<div class="col-lg-1 l-hidden-phone">
+					                </div>
+					                <div class="col-lg-9">
+					                    <h5><strong>Latest Read:</strong></h5>
+					                    <h5><i> `+ latestBookObject.title +`</i></h5>
 					                </div>
 					            </div>
 
@@ -28,10 +31,9 @@ var aboutPage_LatestBookInfo = `<div class="row">
 var aboutPage_LatestLinkInfo = `<div class="row"> 
 					                <div class="col-lg-1 l-hidden-phone">
 					                </div>
-					                <div class="col-lg-11">
-					                    <h5><strong>Latest link:</strong>
-					                        <a href=`+ latestLinkObject.url +`>`+ latestLinkObject.linkName +`</a>
-					                    </h5>
+					                <div class="col-lg-9">
+					                    <h5><strong>Latest link:</strong></h5>
+					                    <h5><a href=`+ latestLinkObject.url +`>`+ latestLinkObject.linkName +`</a></h5>
 					                </div>
 					            </div>
 

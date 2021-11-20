@@ -97,11 +97,11 @@ function bookPicker(num) {
 
 						    <div class="container-fluid">
 						    <div class="row">
-						        <div class="col-1"></div>
-						        <div class="col-10">
+						        <div class="col-lg-2 col-1"></div>
+						        <div class="col-lg-8 col-10">
 						            `+ window.books[num].review +`
 						        </div>
-						        <div class="col-1"></div>
+						        <div class="col-lg-2 col-1"></div>
 						    </div>
 
 						    <!--**** SPACER ROW **************************************************************-->
