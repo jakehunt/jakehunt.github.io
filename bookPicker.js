@@ -7,6 +7,53 @@ for (let i = 0; i < limit; i++) {
     nodes = document.querySelectorAll('div.bookRO');
     var firstNode = nodes[0];
     var lastNode = nodes[nodes.length - 1];
+
+    if (books[i].review == '') {
+    	var book_row_html = `<div class="row bookRO">
+
+					        <div class="col-lg-1 col-md-1 col-sm-1 col-1"></div>
+
+					        <div class="col-lg-10 col-md-10 col-sm-10 col-10 l-remove-top-padding">
+
+					            <div class = "row l-spacer-7px secondary-bg"></div>
+
+					            <div class = "row">
+					                <div class = "col-lg-2 col-md-2 col-sm-4 col-4 l-vertical-center">
+					                    <img class="img-fluid book-cover-image" src=`+ books[i].btu +` alt="`+ books[i].title +`Cover Image">
+					                </div>
+
+					                <div class = "col-lg-10 col-md-10 col-sm-8 col-8">
+					                    <div class="row">
+					                        <div class="container-fluid">
+					                            <h5 class="l-remove-bottom-margin"><strong>Title: </strong> <i>`+ books[i].title +`</i></h5>
+					                            <h5 class="l-remove-bottom-margin"><strong>Author: </strong> <i>`+ books[i].author +`</i></h5>
+					                            <h5 class="l-remove-bottom-margin"><strong>Release Date: </strong> <i>`+ books[i].releaseDate +`</i></h5>
+					                            <h5 class="l-remove-bottom-margin"><strong>Page Count: </strong> <i>`+ books[i].pageCount +`</i></h5>
+					                            <h5 class="l-remove-bottom-margin"><strong>I read this in: </strong> <i>`+ books[i].whenRead +`</i></h5>
+					                            <h5 class="l-remove-bottom-margin"><strong>Rating: </strong>`+ books[i].rating +`</h5>
+					                        </div>
+					                    </div>
+					                </div>
+
+					            </div>
+
+					            <div class="row">
+					                <div class="col-lg-2 col-md-2 col-sm-3 col-12">
+					                    <h5><strong>Summary:</strong></h5>
+					                </div>
+					                <div class="col-lg-10 col-md-10 col-sm-9 col-12 l-remove-top-padding">
+					                    <div class = "container-fluid">                
+					                        <p>`+ books[i].summary +`</p>
+					                    </div>
+					                </div>
+					            </div>
+
+					        </div>
+
+					        <div class="bookRO col-lg-1 col-md-1 col-sm-1 col-1"></div>
+					    </div>`;
+    }
+    else {
 	var book_row_html = `<div class="row bookRO">
 
 					        <div class="col-lg-1 col-md-1 col-sm-1 col-1"></div>
@@ -54,6 +101,7 @@ for (let i = 0; i < limit; i++) {
 
 					        <div class="bookRO col-lg-1 col-md-1 col-sm-1 col-1"></div>
 					    </div>`;
+	}
 
     firstNode.insertAdjacentHTML('beforebegin', book_row_html);
 }

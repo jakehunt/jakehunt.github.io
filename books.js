@@ -26,6 +26,20 @@ function Book(title, id, author, btu, releaseDate, pageCount, rating, summary, r
 // Format:
 // Book Row Variables
 
+// The Old Man and the Sea
+const b4 = new Book(
+	"The Old Man and the Sea", // title
+	"#Old-Man", // id
+	"Ernest Hemingway", // author
+	"https://64.media.tumblr.com/cd33e7e5cf743638325c7ff493594e9a/beb27d0523e19d42-d1/s250x400/0a58b61af72bfff6c6cf1eb872078c2c4f401fdf.jpg", // btu
+	"September 1952", // releaseDate
+	"93", // pageCount
+	"★★★★", // rating
+	"For me, I need more than a rod and some bait to go fishing.  I need the desire.  Nothing but this book and its subtle yet powerful description of all the gritty details\
+	 could have sparked such a desire. Also I don't like sharks now.", // summary
+	``,
+	"November 2021")
+
 // Great Biographies by Readers's Digest: A Condensation of Edison
 const b3 = new Book(
 	"Great Biographies by Readers's Digest: A Condensation of Edison", // title
@@ -51,15 +65,15 @@ const b3 = new Book(
     of a power station.  When alternating current came along, they were able to increase the voltage of the circuit, and transmit electricity over longer distances allowing for power stations to be conveniently 
     placed near power sources (dams, coal mines).</p>
     <br>
-     <p class="tab"> The names that Edison came into contact with are incredible! The original investors of the Edison Electric Light Company, formed in 1878, included Vanderbilt, President Norvin Green of Western Union, 
+     <p class="tab"> The names that Edison came into contact with were none other than the absolute best of American society. The original investors of the Edison Electric Light Company, formed in 1878, included Vanderbilt, President Norvin Green of Western Union, 
     Egisto Fabbri (partner of J.P. Morgan). When Edison later moved from Menlo Park, NJ to Fifth Avenue in NYC, and had his home adorned with his own lights, J.P. Morgan and W.H. Vanderbilt ordered the same for their own 
     residences on Fifth Avenue and Madison Avenue, respectively.  Henry Villard, the railroad magnate, funded Edison's creation of an electric train built in the backyard of the Menlo Park laboratory. 
     George Eastman, the inventor of the "Kodak", created an improved celluloid film, which Edison ordered much of for his motion picture camera: the kineto-phonograph.  Edison was one of the first to created 
     the <a class="primary-tcolor" href="https://www.britannica.com/technology/fluoroscope">fluoroscope</a>, after Professor W.K. Roentgen of the Netherlands discovered X-Rays.  With this fluoroscope devised by 
     Edison, a surgeon performed "the first X-Ray operation in the U.S., with complete success." </p>
     <br>
-    <p class="tab">Edison may have been stimulus which propelled Henry Ford to leave the Detroit Edison Company as chief engineer and start his own small automobile manufacturing unit. 
-    The cause: the head of the Detroit Edison Company at the time introduced Ford to Edison and Edison heard the young engineer describe his first automobile.  Edison responded: "You have - the self-contained
+    <p class="tab">Edison may have been the stimulus which propelled Henry Ford to leave the Detroit Edison Company as chief engineer and start his own small automobile manufacturing unit. 
+    The cause: the head of the Detroit Edison Company at the time introduced Ford to Edison and Edison heard the young engineer describe his first automobile.  Edison responded: "You have it! - the self-contained
     unit carrying its own fuel with it. Keep at it!"  As the biography states: "Ford believed that this first encounter was a turning point for him; his gratitude toward Edison endured and became 
     something like idolatry."</p>
 	<br>   
@@ -74,7 +88,7 @@ const b3 = new Book(
 	But I have found repeatedly evidence of mind.... I do not believe in the God of the theologians; but that there is a Supreme Intelligence, I do not doubt."  On his death bed, his convictions
 	did not waver and 'one who ministered to him asked if "he had thought of a life herafter." "It does not matter," [Edison] replied in a low voice. "No one knows"'</p>
 	<br>
-	<p class="tab"> Due to the demands of work, Edison never had much time for his family resorting to "spending Sunday afternoons with them when work wasn't busy." This seems to be one of the downfalls
+	<p class="tab"> Due to the demands of work, Edison never had much time for his family and resorted to "spending Sunday afternoons with them when work wasn't busy." This seems to be one of the downfalls
 	of a life so prolific in output and contribution to humanity and society as we know it.  His own personal life was lacking.  His children from both of his marriages found him to be remote and not in the picture
 	more often than not. This serves as a fair warning to those seeking a balanced life on earth!</p>
 
@@ -86,8 +100,8 @@ const b3 = new Book(
     		he saved the life of a 3-year old boy playing in the tracks from an oncoming train car.  The father of the child, the stationmaster, in his gratefulness, offered to repay Edison 
     		by teaching him to be a telegrapher over the course of a couple of months.</li>
 		<li class="review-quote-list">Telegraphers, in the early years of the original invention, were called "Lightning Slingers."</li>
-		<li class="review-quote-list">In 1888, the Edison industries including the Edison Electric Light parent company, and its subsidiaries including Edison Lamp, Edison Machine Works, and 
-    		Bergmann's were consolidated into "Edison General Electric Company" due to... "a need for reorganization" at the time.  In 1891, a merger occured between Edison General Electric Company 
+		<li class="review-quote-list">In 1888, the Edison industries, including the Edison Electric Light parent company and its subsidiaries including Edison Lamp, Edison Machine Works, and 
+    		Bergmann's, was consolidated into "Edison General Electric Company" due to... "a need for reorganization" at the time.  In 1891, a merger occured between Edison General Electric Company 
     		and Thomson-Houston Company and the new company born was known as "General Electric Company".  During his lifetime, the company Edison had such a hand in forming, saw his name taken off 
     		the company's title.   </li>
 		<li class="review-quote-list">The most original of his inventions was the <a class="primary-tcolor" href="https://www.pbs.org/weta/roughscience/series2/challenges/sound/page3.html">phonograph</a> (1877).</li>
@@ -184,4 +198,4 @@ const b1 = new Book(
     "October 2021"
 	);
 
-var books = [b1, b2, b3]; // Projects array
+var books = [b1, b2, b3, b4]; // Projects array

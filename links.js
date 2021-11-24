@@ -21,5 +21,9 @@ const L3 = new Link("Romans 7: Enduring Word Commentary",
 const L4 = new Link("U.S. Location Predictor Based Off of How You Say Common Words and Phrases", 
 					"https://www.nytimes.com/interactive/2014/upshot/dialect-quiz-map.html", 
 					"A quiz developed from 350,000 survey responses, its answers are supposedly pretty accurate. When I took it, I was predicted to be from Birmingham.  Fun quiz to take when with friends.");
+const L5 = new Link("How to Over-Engineer a Website // What is a Tech Stack?",
+					"https://www.youtube.com/watch?v=Sxxw3qtb3_g",
+					"This video confirms my wildest fears as a novice website developer. Quite an overwhelming and technical video which aptly describes the mess which is modern day website development. \
+					And now I truly know and can say I know what a 'Full-Stack Software Developer' does!")
 
-var links = [L1, L2, L3, L4];
+var links = [L1, L2, L3, L4, L5];
