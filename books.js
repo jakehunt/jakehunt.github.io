@@ -26,6 +26,62 @@ function Book(title, id, author, btu, releaseDate, pageCount, rating, summary, r
 // Format:
 // Book Row Variables
 
+// The Hobbit
+const b5 = new Book(
+	"The Hobbit", // title
+	"#Hobbit", // id
+	"J.R.R. Tolkien", // author
+	"https://64.media.tumblr.com/aab0c83cebc53e95104b44d2da2fa6bf/fcd35af9c1c3fce3-9d/s400x600/4c37ea57904eca5eb574e7975ff58509742f7de5.jpg", // btu
+	"September 1937", // releaseDate
+	"365", // pageCount
+	"★★★★", // rating
+	`If you're feeling adventurous, but not in the modd to leave your house, then this is the perfect novel to take you beyond your four walls
+	and follow the character of Bilbo Baggins.  Will this book awaken the Took inside you? Get ready for an "enchanting" and classic fantasy adventure.`, // summary
+	`<p>Thoughtless, idle you can be, to ponder, consider... will you flee?</p>
+	<br>
+	<p>Fantasy novels may seem like a waste of time to some people.  I beg to differ.</p><br>
+	<p  class="tab">My first reading of the <i>The Hobbit</i> was in late elementary school.  Over a decade later, here I am again, reading 
+	it for a second time.  If you know my background, I am not good at wasting time and I typically don't read or watch things twice.  Actually, I take it back... 
+	I have enjoyed watching certain movies twice or even three times (<i>Days of Future Past</i>), so what I really mean is that I don't typically read things twice.  Okay, okay so I'll re-read captions
+	for my instagrams posts until they're "perfect" but what I really mean is that you won't find me re-reading a book twice.  Perhaps I do waste time in the digressing of thought... 
+	</p>
+	<br>
+	<p class="tab">Whereas reading the previous paragraph may have been a waste of time, fantasy novels as a genre are not.  They curate your imagination to think beyond.  Sure, if you talk about goblins, 
+	orcs, trolls, and recite the names of Balin, Dwalin, Kili, Fili, Dori, Nori, Ori, Oin, Gloin, Bifur, Bofur, Bombur, and Thorin Oakenshield like I do, you'll get some looks.  However, beneath the surface 
+	of strange lands, characters and other fantastical creations outside of our world, there lies a doorway.  Some see this doorway as an escape, and fantasy stories are often presented as such; however, 
+	I believe fantasy is best enjoyed when you stand on the threshold between our world and its own.  What do I mean by this? A good fantasy story should make you see the world with new eyes, and beckon you
+	to live life with more "whimsy" (to quote Bob Goff's favorite trait).  I've come to realize that strangeness is often just reason unrealized and this realization opens up one's 
+	ability to interact with a whole new group of people: those we naturally consider weird/strange.  I could probably keep rambling on, but for my future self to reminisce a little bit on the actually
+	details of the book, I'll include some observations and connections I made to my life's experiences while 'standing on the threshold'.</p>
+	<br>
+	<p class="tab">The cadence of Bilbo's adventure follows his stomach! The reader is constantly made aware of where the food is or is not.  This adds a plumb line of utter realism amidst so many strange, new,
+	fascinating things.  In my opinion, this is a brilliant device to augment the reader's ability, or lack thereof, to put themselves in Bilbo's shoes.</p>
+	<br>
+	<p class="tab">Our hairy-toed friend makes a comment that really stood out to me on page 286 in chapter 16.  Here's the context: after Smaug's demise, when Thorin and company have sealed themselves within 
+	the Lonely Mountain, Bard, with a large group of Lake-men and elves from Mirkwood, speaks parley to the dwarfs, or specifically Thorin.  Bard communicates that within the hoard there is much wealth 
+	that belongs to him as heir of Girion of Dale (Dale being the city adjacent to the mountain and previously decimated by Smaug).  He also mentions how a portion of the hoard should be given to the 
+	men of Esgaroth for their now-destroyed town.  Lastly, he mentions that he deserves a portion himself for slaying the dragon.  Upon this final statement, Tolkien reveals Bilbo's following thoughts: 
+	"[Bilbo] did not, of course, expect that any one would remember that it was he who discovered all by himself the dragon's weak spot; and that was just as well, for no one ever did." So Bard was only able 
+	to slay the dragon because of the intel from the thrush.  The thrush would have made a nice kebab if it hadn't carried the important information given to it by the one and only Bilbo! And he had to learn this 
+	information while in close proximity to Smaug from in his lair! Bilbo plays to Smaug's pride to learn his weakness, yet demonstrates a humble spirit when the treasure is doled out.  
+	In our world, how many great deeds of individuals/companies do the masses
+	of society (which includes me) misallocate?  Just the thought that there are countless unsung heroes in the world imparts more passion within me to treat everyone with more respect. </p>
+	<br>
+	<p class="tab">Lastly, the fight between dwarves versus men and elves being averted at the last minute due to the appearance of a common enemy, the goblins and warg army, is both highly fortunate
+	and utterly crazy to think about.  Right when they were at each other's throats, they put everything aside to fight the enemy.  Maybe you and your coworker don't naturally get along and the common enemy which
+	bonds you together is your intense work life.  Perhaps the relational strife of peacetime and clashing of personalities is pacified by the onset of national war.  If war broke out on U.S. homesoil due to the
+	onset of another nation, I believe the national unrest, widespread perpetuation of racism, and polarization of thought which is televised in the news would recede as people
+	rally together to fight the common enemy.  As strange as it is to say, I think that war may be the best antidote the secular world can offer to a modern society in need of true peace between neighbors; such peace which 
+	is *rarely (*See the final statement of this paragraph) found during 'times of peace'.  And after a war, people in general go back to pursuing ease of living and the whole cycle starts over.  How sad is it if the best glue that holds people and
+	societies together is having a common enemy! I may have butchered the thought I was trying to
+	say in this paragraph, but I will end with this so it at least sounds like I got to a point: Jesus is the permanent reconciliation that humanity so craves.</p>
+	<br>
+	<p class="tab">Oh, and Gollum and Bilbo's riddle battle is just extraordinary.  Here's one of my favorite riddles from the scene: "A box without hinges, key, or lid, Yet golden treasure inside is hid." 
+	I know, it's easy.  But that doesn't mean it's not good!</p>
+	<br>
+	`,
+	"November 2021")
+
 // The Old Man and the Sea
 const b4 = new Book(
 	"The Old Man and the Sea", // title
@@ -198,4 +254,4 @@ const b1 = new Book(
     "October 2021"
 	);
 
-var books = [b1, b2, b3, b4]; // Projects array
+var books = [b1, b2, b3, b4, b5]; // Projects array
