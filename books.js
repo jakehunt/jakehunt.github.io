@@ -26,6 +26,31 @@ function Book(title, id, author, btu, releaseDate, pageCount, rating, summary, r
 // Format:
 // Book Row Variables
 
+// The Old Man and the Sea
+const b6 = new Book(
+	"The Fellowship of The Ring", // title
+	"#Lord1", // id
+	"J.R.R. Tolkien", // author
+	"https://64.media.tumblr.com/11ad7eebba1f411807a827499a28241d/e3091b3755d4b3f0-8c/s400x600/f28cf43b5aaf7e496f15d7f0a986ab808aa64e0f.jpg", // btu
+	"July 1954", // releaseDate
+	"398", // pageCount
+	"★★★★★", // rating
+	"The beginning of a journey like no other.  This book evokes a great sense of wonder and longing, and brooding and awareness.", // summary
+	`<p>WARNING: Spoilers ahead.</p>
+	<br>
+	<p class="tab">A poetic summary of the adventures of Frodo in this wonderful book: From the safety of the Shire, to their beginning in Buckland, to the orneriness of the Old Forest and its wicked Withywindle, to the sound home of Tom Bombadil and daughter Goldberry, to the
+	buried plight of the Barrow-Downs, to the predicament at the Prancing Pony in Bree, to the security of Strider, to the mosquitos in Midgewater, to the wound at Weathertop, to the luck at the Last Bridge, to the throwback at the trollshaw, to the fight at the ford of the Bruinen,
+	to the reward of rest at Rivendell.</p> 
+	<br>
+	<p class="tab"> At Rivendell, Frodo is healed of his wound, Bilbo's whereabouts are revealed, and Gandalf is finally met.  At the Council of Elrond, much lore of Middle-Earth is revealed.  Aragorn's love is made apparent in Arwen, later to be discovered as granddaughter of the Lady Galadriel. Frodo's mission is established to 
+	destroy the Ring in the Cracks of Doom at Orodruin (Mount Doom).  Elrond organizes a group of eight to accompany Frodo, making nine total, a fellowship consisting of Merry, Pippin, Frodo, Sam, Gandalf, Gimli, Legolas, Aragorn, and Boromir.</p>
+	<br>
+	<p class="tab"> To the south they make haste, for the long hand of the enemy is still stretching.  Across the Misty Mountains they must go but which way will they take? To the Redhorn Gate of cantankerous Caradhras, misfortune they meet and back they came.  Beyond they could travel to the Gap of Rohan but after the ill-tidings
+	Gandalf brought of Saruman at Isengard, little faith they had in the horse-lords of the Rohirrim.  Over and beyond were both out of question, so at last they determined to go under in the ancient mines of Moria.  To the east gate they travelled, to the waterhole of the Watcher, in they went with little time to spare.  
+	To the west they went, the tomb of Balin they found, stuck they were, they escaped Durin's Bane, the Balrog, not as nine but as eight.  Down the Celebrant to the mallorns of Lothlorien, thankfully with Legolas, accepted by the Sylvan elves.  To the green elevated city of Caras Galadhon, to the great river Anduin, to the 
+	falls of Rauros, and to the end of the journey together.  Frodo almost escapes alone, if not for the loyalty of Sam Gamgee, to begin the next leg of the quest a quarter of their previous number.</p>`,
+	"December 2021")
+
 // The Hobbit
 const b5 = new Book(
 	"The Hobbit", // title
@@ -78,8 +103,7 @@ const b5 = new Book(
 	<br>
 	<p class="tab">Oh, and Gollum and Bilbo's riddle battle is just extraordinary.  Here's one of my favorite riddles from the scene: "A box without hinges, key, or lid, Yet golden treasure inside is hid." 
 	I know, it's easy.  But that doesn't mean it's not good!</p>
-	<br>
-	`,
+	<br>`,
 	"November 2021")
 
 // The Old Man and the Sea
@@ -254,4 +278,4 @@ const b1 = new Book(
     "October 2021"
 	);
 
-var books = [b1, b2, b3, b4, b5]; // Projects array
+var books = [b1, b2, b3, b4, b5, b6]; // Projects array
