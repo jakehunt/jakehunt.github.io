@@ -92,7 +92,7 @@ for (let i = 0; i < limit; i++) {
 					                    </div>
 					                    <div class="container-fluid">
 					                        <div class="l-spacer"></div>
-					                        <button href="" class="btn btn-primary" onclick="bookPicker(`+ i +`)"><h6 class="l-remove-bottom-margin"> See Review &#8594;</h6></button>
+					                        <button href="" class="btn btn-primary" onclick="bookPicker(`+ i +`)"><h6 class="l-remove-bottom-margin"> See 'Review' &#8594;</h6></button>
 					                    </div>
 					                </div>
 					            </div>

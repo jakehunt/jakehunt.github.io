@@ -26,7 +26,38 @@ function Book(title, id, author, btu, releaseDate, pageCount, rating, summary, r
 // Format:
 // Book Row Variables
 
-// The Old Man and the Sea
+// Immune - A Journey into the Mysterious System That Keeps You Alive
+const b7 = new Book(
+	"Immune - A Journey into the Mysterious System That Keeps You Alive", // title
+	"#Immune", // id
+	"Philipp Dettmer", // author
+	"https://64.media.tumblr.com/cdeb915a9d199434029c41cf6428caf2/1d1d52343baac469-cf/s400x600/7c2c24c8d073f33a21f52ae27dc1e351a259c912.jpg", // btu
+	"November 2021", // releaseDate
+	"315", // pageCount
+	"★★★★★", // rating
+	"This book explains so much in so little.  The use of analogy is not only brilliant for explaining this ghastly complicated system but truly enjoyable.  A greater sense of wonder is beset upon the reader.", // summary
+	`<p class="tab">HIV/AIDS: When the immune system is too weak.  Allergies: When the immune system is too strong.  Autoimmune Disease: When the immune system stops differentiating between "self" and "other".  
+	Cancer: When part of you 'decides' to no longer be a part of you.  Hygiene: what do you think the book says about this? You may be surprised...</p> 
+	<br>
+	<p class="tab"> Since the pandemic of Covid-19 has befallen our current world, I have been inundated, overwhelmed with, and increasingly bored with... no not the disease itself... but rather conversation around Covid-19.  Many people 
+	discuss things without concern for doing research.  And research is difficult regarding a topic so politically charged.  So I forgive them, and I forgive myself for not taking the time to research.  I can't imagine how much time I would
+	have wasted in lieu of reading this book! <i>Immune</i> dives into the deep end of the pool but avoids getting sucked down the drain in terms of surveying the information available.  Every single page invites potential further study.  Let's not
+	relate this book to studying; however, because it was truly a joy to read.  I now have more confidence in navigating discussions around the immune system, vaccines in particular, and Covid-19 itself.  </p>
+	<br>
+	<p class="tab"> The analogies employed are incredible! First he breaks the immune system into 2 types: The Innate Immune System and the Adaptive Immune System.  This sets the framework for the book.  One analogy that really stuck was the way that 
+	your Neutrophil cells (the crazy Suicidal Spartan Warriors of the Immune System) attack intruder pathogens: they use a 'NET'.  Or rather, a 'Neutrophil Extracellular Trap', which involves the Neutrophil dissolving its nucleus allowing its DNA to 
+	spread out into its body which causes the DNA strands to pick up proteins and other particles. Then the Neutrophil rips its body open and pulls the DNA stands out and starts 'swinging them around' as a sort of spiky whip to catch anyone unfortunate 
+	enough to be near its wrath.</p>
+	<br>
+	<p class="tab">Some information is kind of scary.  The human immune system is more dangerous than any pathogen out there. Also the fact that adult-onset allergies is a thing makes me way more appreciative of each day.  Most of the information 
+	is more encouraging.  The intricate dance that gets played by your immune system every day and especially during infections, is ridiculously magical.  There are so many safeguards, like two-factor authentication methods deterring your immune system 
+	from just going crazy all willy nilly.</p>  
+	<br>
+	<p>I cannot give this book enough praise.  What are antibodies, what are the different types of vaccines, what are Dendritic cells, what apoptosis have to do with hot dog buns? All these questions and way way more are answered in this book.<br>
+	Absolutely a magnificent journey worth taking again.</p>`,
+	"December 2021 - January 2022")
+
+// The Fellowship of the ring
 const b6 = new Book(
 	"The Fellowship of The Ring", // title
 	"#Lord1", // id
@@ -60,7 +91,7 @@ const b5 = new Book(
 	"September 1937", // releaseDate
 	"365", // pageCount
 	"★★★★", // rating
-	`If you're feeling adventurous, but not in the modd to leave your house, then this is the perfect novel to take you beyond your four walls
+	`If you're feeling adventurous, but not in the mood to leave your house, then this is the perfect novel to take you beyond your four walls
 	and follow the character of Bilbo Baggins.  Will this book awaken the Took inside you? Get ready for an "enchanting" and classic fantasy adventure.`, // summary
 	`<p>Thoughtless, idle you can be, to ponder, consider... will you flee?</p>
 	<br>
@@ -278,4 +309,4 @@ const b1 = new Book(
     "October 2021"
 	);
 
-var books = [b1, b2, b3, b4, b5, b6]; // Projects array
+var books = [b1, b2, b3, b4, b5, b6, b7]; // Projects array

@@ -26,4 +26,9 @@ const L5 = new Link("How to Over-Engineer a Website // What is a Tech Stack?",
 					"This video confirms my wildest fears as a novice website developer. Quite an overwhelming and technical video which aptly describes the mess which is modern day website development. \
 					And now I truly know and can say I know what a 'Full-Stack Software Developer' does!")
 
-var links = [L1, L2, L3, L4, L5];
+const L6 = new Link("Philosophy Timeline",
+					"https://www.denizcemonduygu.com/philo/browse/",
+					"I like and dislike philosophy.  It's a little pompous.  However, this vast timeline of famous philosophical ideas, grouped by philophers and how they relate to each other is applied software visualization at its finest.")
+
+
+var links = [L1, L2, L3, L4, L5, L6];
