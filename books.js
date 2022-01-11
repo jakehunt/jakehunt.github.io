@@ -26,6 +26,59 @@ function Book(title, id, author, btu, releaseDate, pageCount, rating, summary, r
 // Format:
 // Book Row Variables
 
+/*
+const b8 = new Book(
+	"The Two Towers", // title
+	"#TwoTowers", // id
+	"J.R.R. Tolkien", // author
+	"https://64.media.tumblr.com/f98db3fa6aab4d385c9815666033a246/fa6ee6733519d0dc-f3/s400x600/c2ab428d77f307a7071ab07aa64c9322ded348d9.jpg", // btu
+	"November 1954", // releaseDate
+	"322", // pageCount
+	"★★★★★", // rating
+	"This is the meat of the story.  It simply doesn't get more epic than the battle of Helm's Deep.  ", // summary
+	`<p class="tab"></p> 
+	<br>
+	<p class="tab"></p>
+	<br>
+	<p class="tab"></p>
+	<br>
+	<p class="tab"></p>  
+	<br>
+	<p></p>`,
+	"December 2021 - January 2022")
+*/
+
+// The Two Towers
+const b8 = new Book(
+	"The Two Towers", // title
+	"#TwoTowers", // id
+	"J.R.R. Tolkien", // author
+	"https://64.media.tumblr.com/f98db3fa6aab4d385c9815666033a246/fa6ee6733519d0dc-f3/s400x600/c2ab428d77f307a7071ab07aa64c9322ded348d9.jpg", // btu
+	"November 1954", // releaseDate
+	"322", // pageCount
+	"★★★★★", // rating
+	"This is the meat of the story.  It simply doesn't get more epic than the battle of Helm's Deep.  ", // summary
+	`<p class="tab">Impending doom drives the tension of this book.  Evil lurks around every bend.  I've always worried about how I enjoy to talk about the great evils in the Lord of the Rings but fail 
+	to remember their conqueroring.  How did Frodo and Sam escape the clutches of Shelob? How did Aragorn, Gimli, and Legolas escape the legions of Orcs and Uruk-hai at Helm's Deep? In this re-read, I truly enjoy
+	seeing evil topple over and good triumph.</p> 
+	<br>
+	<p class="tab">Tolkien continues to sear the geography of Middle-Earth into my mind, just as the first book.  Some things, in particular, that I enjoyed this time around included the description of the power of Saruman's voice/will.  
+	To have a commanding air and voice as of Saruman is as tempting as the choice offered to King Theoden to join him.  Even in defeat, long-practiced wisdom holds power even when applied for wrongdoing.  Or perhaps the 
+	moral is to simply not celebrate while your enemy is still standing.</p>
+	<br>
+	<p class="tab">Another aspect I enjoyed was seeing characters deal with the power of temptation to wield the Ring (and similarly Pippin and the Palantir).  This theme runs through all the books but its message
+	is powerful: when presented with the temptation of true power, do you take it? It makes me question the root of my moral tendencies.  If I think deep down, I (just physical me) am truly good, and all bad in me are 
+	simply blemishes I have picked up along the way in life, then I may be tempted to say "Yes, I can wield true power".  But what is true power? Whatever it is, how would someone innately without true power, ever be 
+	able to use such a power without being enslaved to it? These comments are getting a little abstract, so I'll mention that my appreciation of the discussion of temptation is more generalized, in which I have enjoyed
+	gaining a heightened sense of the inner battles within me.  Okay, that sounded melodramatic. Life is more fun when the senses are awake.  Is this a book review or a reflection on life? I hope all these 'reviews' 
+	include parallels to life!</p>
+	<br>
+	<p class="tab">Sam's description of Gollum as Slinker and Stinker was right on.  I love it.  I mistrusted Gollum right alongside Sam the whole way.  The last 3 pages of the Battle of Helm's Deep I had to 
+	re-read aloud again while writing this, and wow it really is incredible.  The walk through Shelob's lair was quite the olfactory experience, to my surprise.  I had a dream (nightmare you may call it), where
+	I had an evil smell that persisted in and even after waking.  Tolkien's description of that evil smell in the lair reminded me of my own experience.  Thankfully we have something even better in our world than
+	the light of Galadriel.  We have the light of Christ.</p>`,
+	"December 2021 - January 2022")
+
 // Immune - A Journey into the Mysterious System That Keeps You Alive
 const b7 = new Book(
 	"Immune - A Journey into the Mysterious System That Keeps You Alive", // title
@@ -57,7 +110,7 @@ const b7 = new Book(
 	Absolutely a magnificent journey worth taking again.</p>`,
 	"December 2021 - January 2022")
 
-// The Fellowship of the ring
+// The Fellowship of the Ring
 const b6 = new Book(
 	"The Fellowship of The Ring", // title
 	"#Lord1", // id
@@ -309,4 +362,4 @@ const b1 = new Book(
     "October 2021"
 	);
 
-var books = [b1, b2, b3, b4, b5, b6, b7]; // Projects array
+var books = [b1, b2, b3, b4, b5, b6, b7, b8]; // Projects array
