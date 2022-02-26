@@ -26,6 +26,12 @@ function Book(title, id, author, btu, releaseDate, pageCount, rating, summary, r
 // Format:
 // Book Row Variables
 
+
+// Code Folding Keyboard Bindings:
+// Fold all: CTRL + K, CTRL + 1
+// Unfold all; CTRL + K, CTRL + J
+// Tip: Don't release CTRL between commands when performing the above.
+
 /*
 const b8 = new Book(
 	"The Two Towers", // title
@@ -47,6 +53,67 @@ const b8 = new Book(
 	<p></p>`,
 	"December 2021 - January 2022")
 */
+
+// The Return of the King
+const b10 = new Book(
+	"The Return of the King", // title
+	"#TheReturnOfTheKing", // id
+	"J.R.R. Tolkien", // author
+	"https://64.media.tumblr.com/0399640f1496e9a0cd8c7ea4cb9b28b5/0b56595920758b1a-72/s250x400/c9e213e33529512ca5a243686ca38b8721b0dab8.jpg", // btu
+	"October 1955", // releaseDate
+	"277", // pageCount
+	"★★★★★", // rating
+	"The ending of the Third age of Middle-Earth, told in all of its magnificent detail.", // summary
+	`<p><i>When I read this book...</i></p>
+	<p class="tab">I was traveling for work performing Walmart site surveys in TN, MS, LA, and TX.  My evenings at the hotel were spent enjoying this masterpiece.</p> 
+	<br>
+	<p><i>On Denethor</i></p>
+	<p class="tab">During this second reading, I was greatly appalled that the burning of Denethor is actually a viable event that Tolkien could write into this world.  What deplorable
+	combination of hubris and cowardice could lead a man to such a monstrous decision to burn himself alive merely to avoid seeing the downfall of his kingdom.  I hate that this sentiment is one
+	that could actually be dreamed of existing within us in our world. I suppose that people who enact great evils were first ensnared by a seemingly small evil.  In Denethor's case, I believe his 'small'
+	evil was imagining himself capable of looking into his palantir and not succumbing to Sauron's evil will.</p>
+	<br>
+	<p><i>On Eowyn</i></p>
+	<p class="tab">If you are slightly interested at all in the Christian symbolism in Lord of the Rings, then carve out 20 minutes of your day to watch this video: 
+	 <a href="https://www.youtube.com/watch?v=-gvuk3pxjnU">Is the Lord of the Rings a Christian Story? (With Tolkien Scholar Dr. Steve Fratt)</a> and also check out the section on Christ at the
+	 following wikipedia page: <a href="https://en.wikipedia.org/wiki/Christianity_in_Middle-earth#:~:text=the%20symbolism.%5B25%5D-,Christ,-%5Bedit%5D">Christianity in Middle-Earth</a>.  However, on the 
+	 topic of Eowyn, you have to listen to why Steve Fratt in the aforementioned video relates most to him (14:08 - 15:06). </p> 
+	<br>
+	<p><i>On Samwise</i></p>
+	<p class="tab">It really hit home when Gandalf and Frodo, two of the most influential characters throughout the story, leave Middle-Earth.  It truly felt like a great loss to me emotionally.  Middle-Earth is left 
+	more beautiful than when the story began, but now only Samwise is left.  All of this is great fodder for pondering the concept of change, on which I thought of my own life and leaving college, confronting major life change, 
+	and feeling much of what Sam must have felt at the leaving of many of his friends.</p>  
+	<br>
+	<p><i>On the World of Middle-Earth</i></p>
+	<p class="tab">I love it.  The history of the world is much too detailed for me to commit to memory all of the many peripheral characters, but helps me better grasp our own world's history 
+	(particularly the book of Genesis).  The vastness of lore present here rather inspires me to create!  What a creation that Tolkien made! Let us simply wonder at the fact God has enabled us to be co-creators with him in life.
+	What a beautiful thing.  Let's always remember to enjoy creation, but enjoy our creator, and his gracious love for us, even more.</p>`,
+	"January 2022 - February 2022")
+
+// Ready Player One
+const b9 = new Book(
+	"Ready Player One", // title
+	"#ReadyPlayerOne", // id
+	"Ernest Cline", // author
+	"https://64.media.tumblr.com/568197decb59260f3a3ff528787284fe/7d121c80730f8a53-a3/s500x750/d510c0451289efe85d26c3fc22b82c4f19e6bd9a.jpg", // btu
+	"August 2011", // releaseDate
+	"15 hrs 40 mins", // pageCount
+	"★★★★★", // rating
+	"Stunned at the power my first audiobook.  This narrator plus this story is a must listen!", // summary
+	`<p class="tab">SPOILERS AHEAD.  As stated in the summary, this was my first audiobook experience.  Had a lot of travel one week for work driving around Tennessee and Mississippi and the length of the book matched my total drive time almost PERFECTLY.  I started it when I left the house on Monday and finished an hour before I got back on Thursday.  Impeccable timing.</p> 
+	<br>
+	<p class="tab">I'm going to keep this review short and to the point.  Ready player one is the first story I've experienced which comments in a meaningful, big picture way on my experience of playing video games in my childhood.  Where I've sometimes looked back with a guilty conscience, wondering how else I could have spent days of my life, 
+	the nostalgia Wade has for 80's games and culture (albeit a vicarious nostalgia semi-forced on him through his socio-economic position and Halliday's hunt), is highly akin to the nostalgia I have for the games played growing up.  Kingdom Hearts, Sly Cooper, Uncharted... games that truly broadened my worldview and appreciation for life.  Also, the
+	parallel between the Oasis and with Facebook's Metaverse is crazy! It's such a feasible reality which the world is heading.  
+	</p>
+	<br>
+	<p class="tab"> Paraphrase: "5 years later, a name finally appeared on Halliday's scoreboard, and that name was me" - LEGendary!! I love this line.  I was really feeling this story from this point and beyond.</p>
+	<br>
+	<p class="tab">The quarter.  What does this item do??? I was thinking, it's going to be sneaky high-level powerful, but what could it be?? While I'm continuing to listen, I'm running through all the possibilities of the effect of the quarter, already preparing myself to be disappointed.  But the reveal was lit!!! As I'm writing this review, I'm thinking I need to listen to this again.</p>
+    	<br>
+	<p class="tab">Halliday's final advice before handing the Oasis to Wade reminded me that while the virtual world is a place where real-world relationships can grow, the virtual world will never fulfill like the real-world can.  <-- THat's the basic conclusion Halliday finally comes to which is cool I guess... which makes me wonder how a change in heart for Wade would make for an interesting 
+	second book if he walks away from the Oasis!!?! I would add to Halliday's conclusion and say that even the real world will never truly fulfill our human desires.  Only God can fill the void in our heart, with a new spirit: Christ in us.</p>`,
+	"January 2022")
 
 // The Two Towers
 const b8 = new Book(
@@ -218,36 +285,36 @@ const b3 = new Book(
 	`<p class="tab"> This shall be less of a review, and more of a condensation of the condensation of Edison, so to say, for myself to look back upon to recall some of the more
 	outstanding points and interesting details from such a prolific life. This still turned out to be rather long, so if you're only here for a minute, I would skip to the bottom and read the quotes!</p>
 	<br>
-    <p class="tab">	Edison was born in 1947 and his life was "an orgy of toil". A common theme throughout Edison's life was improving upon others' inventions.  He improved upon the telegraph, inventing the 
-    <a class="primary-tcolor" href="https://ethw.org/Quadruplex_Telegraph" >quadruplex telegraph</a> (1874) allowing for sending and 
-    receiving of messages simultaneously along a single line (4 at a time).  He improved upon Alexander Graham Bell's telephone, making it so that one would not have to shout into it for sound to be transmitted.
-    In addition, he increased the volume of the transmitted sound, and improved on the articulation of words (1876).  Most famously, he improved upon the incandescent lamp, by lengthening the duration of time it could emit light by finding
-    a proper filament mateial (his final solution involved a carbonized cotton filament), and a proper method of creating a vacuum for the filament to reside within (1879).</p>
-    <br>
-    <p class="tab"> Ironically enough, he was stalwart against improvements upon his idea for mass distribution of power.  The first power station was built by Edison on Pearl Street New York.  It 
-    ran on massive 'dynamos', and ran on direct current.  Direct current has a major limitation: it is required to be run at low voltages which requires recipients of electricity to be within 2 miles 
-    of a power station.  When alternating current came along, they were able to increase the voltage of the circuit, and transmit electricity over longer distances allowing for power stations to be conveniently 
-    placed near power sources (dams, coal mines).</p>
-    <br>
-     <p class="tab"> The names that Edison came into contact with were none other than the absolute best of American society. The original investors of the Edison Electric Light Company, formed in 1878, included Vanderbilt, President Norvin Green of Western Union, 
-    Egisto Fabbri (partner of J.P. Morgan). When Edison later moved from Menlo Park, NJ to Fifth Avenue in NYC, and had his home adorned with his own lights, J.P. Morgan and W.H. Vanderbilt ordered the same for their own 
-    residences on Fifth Avenue and Madison Avenue, respectively.  Henry Villard, the railroad magnate, funded Edison's creation of an electric train built in the backyard of the Menlo Park laboratory. 
-    George Eastman, the inventor of the "Kodak", created an improved celluloid film, which Edison ordered much of for his motion picture camera: the kineto-phonograph.  Edison was one of the first to created 
-    the <a class="primary-tcolor" href="https://www.britannica.com/technology/fluoroscope">fluoroscope</a>, after Professor W.K. Roentgen of the Netherlands discovered X-Rays.  With this fluoroscope devised by 
-    Edison, a surgeon performed "the first X-Ray operation in the U.S., with complete success." </p>
-    <br>
-    <p class="tab">Edison may have been the stimulus which propelled Henry Ford to leave the Detroit Edison Company as chief engineer and start his own small automobile manufacturing unit. 
-    The cause: the head of the Detroit Edison Company at the time introduced Ford to Edison and Edison heard the young engineer describe his first automobile.  Edison responded: "You have it! - the self-contained
-    unit carrying its own fuel with it. Keep at it!"  As the biography states: "Ford believed that this first encounter was a turning point for him; his gratitude toward Edison endured and became 
-    something like idolatry."</p>
+	<p class="tab">	Edison was born in 1947 and his life was "an orgy of toil". A common theme throughout Edison's life was improving upon others' inventions.  He improved upon the telegraph, inventing the 
+	<a class="primary-tcolor" href="https://ethw.org/Quadruplex_Telegraph" >quadruplex telegraph</a> (1874) allowing for sending and 
+	receiving of messages simultaneously along a single line (4 at a time).  He improved upon Alexander Graham Bell's telephone, making it so that one would not have to shout into it for sound to be transmitted.
+	In addition, he increased the volume of the transmitted sound, and improved on the articulation of words (1876).  Most famously, he improved upon the incandescent lamp, by lengthening the duration of time it could emit light by finding
+	a proper filament mateial (his final solution involved a carbonized cotton filament), and a proper method of creating a vacuum for the filament to reside within (1879).</p>
+	<br>
+	<p class="tab"> Ironically enough, he was stalwart against improvements upon his idea for mass distribution of power.  The first power station was built by Edison on Pearl Street New York.  It 
+	ran on massive 'dynamos', and ran on direct current.  Direct current has a major limitation: it is required to be run at low voltages which requires recipients of electricity to be within 2 miles 
+	of a power station.  When alternating current came along, they were able to increase the voltage of the circuit, and transmit electricity over longer distances allowing for power stations to be conveniently 
+	placed near power sources (dams, coal mines).</p>
+	<br>
+	<p class="tab"> The names that Edison came into contact with were none other than the absolute best of American society. The original investors of the Edison Electric Light Company, formed in 1878, included Vanderbilt, President Norvin Green of Western Union, 
+	Egisto Fabbri (partner of J.P. Morgan). When Edison later moved from Menlo Park, NJ to Fifth Avenue in NYC, and had his home adorned with his own lights, J.P. Morgan and W.H. Vanderbilt ordered the same for their own 
+	residences on Fifth Avenue and Madison Avenue, respectively.  Henry Villard, the railroad magnate, funded Edison's creation of an electric train built in the backyard of the Menlo Park laboratory. 
+	George Eastman, the inventor of the "Kodak", created an improved celluloid film, which Edison ordered much of for his motion picture camera: the kineto-phonograph.  Edison was one of the first to created 
+	the <a class="primary-tcolor" href="https://www.britannica.com/technology/fluoroscope">fluoroscope</a>, after Professor W.K. Roentgen of the Netherlands discovered X-Rays.  With this fluoroscope devised by 
+	Edison, a surgeon performed "the first X-Ray operation in the U.S., with complete success." </p>
+	<br>
+	<p class="tab">Edison may have been the stimulus which propelled Henry Ford to leave the Detroit Edison Company as chief engineer and start his own small automobile manufacturing unit. 
+	The cause: the head of the Detroit Edison Company at the time introduced Ford to Edison and Edison heard the young engineer describe his first automobile.  Edison responded: "You have it! - the self-contained
+	unit carrying its own fuel with it. Keep at it!"  As the biography states: "Ford believed that this first encounter was a turning point for him; his gratitude toward Edison endured and became 
+	something like idolatry."</p>
 	<br>   
-    <p class="tab">  
-    At the end of his life, he attempted to find a way to domestically produce rubber, important for the growing automobile
-    industry, to prepare for wartime. His approach to finding a solution was akin to the way he had always done it: getting his hands on all possible materials and trying everything.  He came across
-    the goldenrod plant as the best candidate to be grown in the states for a 12% rubber yield.  Unfortunately, it never gained traction, because of the German chemical process for converting coal or 
-    petroleum derivatives into synthetic rubber, which proved less difficult and less costly a process to acheive a product superior to that of natural rubber from plants. Check out a timeline of Edison's 
-    inventions <a class="primary-tcolor" href="https://americanhistory.si.edu/lighting/scripts/s19t.htm">here</a>.</p>
-    <br> 
+	<p class="tab">  
+	At the end of his life, he attempted to find a way to domestically produce rubber, important for the growing automobile
+	industry, to prepare for wartime. His approach to finding a solution was akin to the way he had always done it: getting his hands on all possible materials and trying everything.  He came across
+	the goldenrod plant as the best candidate to be grown in the states for a 12% rubber yield.  Unfortunately, it never gained traction, because of the German chemical process for converting coal or 
+	petroleum derivatives into synthetic rubber, which proved less difficult and less costly a process to acheive a product superior to that of natural rubber from plants. Check out a timeline of Edison's 
+	inventions <a class="primary-tcolor" href="https://americanhistory.si.edu/lighting/scripts/s19t.htm">here</a>.</p>
+	<br> 
 	<p class="tab"> I found it curious that although Edison was an agnostic, he made the following statement: "If there is really any soul I have found no evidence of it in my investigations.... 
 	But I have found repeatedly evidence of mind.... I do not believe in the God of the theologians; but that there is a Supreme Intelligence, I do not doubt."  On his death bed, his convictions
 	did not waver and 'one who ministered to him asked if "he had thought of a life herafter." "It does not matter," [Edison] replied in a low voice. "No one knows"'</p>
@@ -256,7 +323,7 @@ const b3 = new Book(
 	of a life so prolific in output and contribution to humanity and society as we know it.  His own personal life was lacking.  His children from both of his marriages found him to be remote and not in the picture
 	more often than not. This serves as a fair warning to those seeking a balanced life on earth!</p>
 
-    <br>
+	<br>
 	<p>Interesting Facts and Notes from the Biography</p>
 	<ul>
 		<li class="review-quote-list">Edison proposed the formation of a scientific research laboratory for the Navy: thus the <a class="primary-tcolor" href="https://www.nrl.navy.mil/">Naval Research Laboratory</a> was born.</li>
@@ -362,4 +429,4 @@ const b1 = new Book(
     "October 2021"
 	);
 
-var books = [b1, b2, b3, b4, b5, b6, b7, b8]; // Projects array
+var books = [b1, b2, b3, b4, b5, b6, b7, b8, b9, b10]; // Projects array
