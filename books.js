@@ -42,17 +42,41 @@ const b8 = new Book(
 	"322", // pageCount
 	"★★★★★", // rating
 	"This is the meat of the story.  It simply doesn't get more epic than the battle of Helm's Deep.  ", // summary
-	`<p class="tab"></p> 
-	<br>
-	<p class="tab"></p>
-	<br>
-	<p class="tab"></p>
-	<br>
-	<p class="tab"></p>  
-	<br>
-	<p></p>`,
+	`<!-- Use html5-editor at https://html5-editor.net/  -->`,
 	"December 2021 - January 2022")
 */
+
+const b11 = new Book(
+	"From Hell's Half Acre to The Moon", // title
+	"#HellMoon", // id
+	"Ernest Pullen", // author
+	"https://64.media.tumblr.com/ae6e05126e7b27cd1003731f7803ff8e/53d9a669b6c15cbe-e5/s640x960/ff70047325801eb0045aba85ff67a166ab8a6cb3.jpg", // btu
+	"December 2020", // releaseDate
+	"285", // pageCount
+	"★★★★★", // rating
+	"The fascinating, turbulent story of C.E. Pullen.  This book was given to me by a new friend from church who also happens to be the author.", // summary
+	`<p><strong>How I heard about this book:&nbsp;</strong><em>From Hell's Half Acre to The Moon&nbsp;</em>is the story of C.E. Pullen, as told by his son Ernest Pullen. &nbsp;I met Ernest while living with my parents in our new home in Ball Ground, GA. &nbsp;After church one Sunday, the three of us went out to eat with some other church members at a local seafood restaurant, one among the company I had the pleasure of meeting Ernest. &nbsp;In addition to good conversation, it came up that he wrote a book. &nbsp;I was fascinated and inquired more and was pleased to be offered a copy he had in his car. &nbsp;I hadn't known it at the time, but our conversation over lunch had quite coincidentally touched on a sample of topics mentioned in his book about his Dad, Charles Eugene Pullen (C.E.). &nbsp;Those topics solely brought up by me included my recent trips to Miami for work, and my experience at GTRI in the Electro-Optical Systems Laboratory (EOSL). &nbsp;I'm glad Ernest thought I would appreciate his Dad's story based on our conversation, because it was a joy of a read, made even more special by walking away from the book a better person than before, having witnessed a man worthy of respect, yet seemingly abundantly willing to give respect&nbsp;out to everyone he encountered.</p>
+	<p>&nbsp;</p>
+	<p><strong>Amazon Review</strong><strong>:&nbsp;</strong>Why should you read this book? C.E. is an accomplished individual, and the stories of each accomplishment are utterly fascinating, but you can get the summary about his major accomplishments on the back cover, so that's not why. &nbsp;The absurd number of times C.E. has a brush with death is also entertaining to read, if you may (like why he wears an eye patch), but that's also not why. &nbsp;You should read this book because it is truly enjoyable to become immersed in the story of an era, a family, and a man that very few people know about! This is not a story where all loose ends are tied into a happy ending either; no, it is very real. &nbsp;If you let it, the story of C.E. will make you think critically about your own place, purpose, and relationships, and you will walk away a better human being.</p>
+	<p>&nbsp;</p>
+	<p>Warning: ****Spoilers Ahead****</p>
+	<p>&nbsp;</p>
+	<p><strong>All brushes with death:</strong></p>
+	<p>This may be a weird list to want to make, but I wanted to revisit this aspect of the book, because it's straight crazy how many times C.E. almost dies. &nbsp;Seriously.&nbsp; Read this list.&nbsp; I probably missed 1 or 2 events.</p>
+	<ol>
+	<li>pg 56 -- At 6 yrs old, C.E. trips on fence lands face first into the wash pot he was holding. Cuts his lip on the pot leaving a lifelong scar, and a piece of fence wire "pierced his right eye leaving him blind in the right eye for several years."</li>
+	<li>pg 82 -- Each member of the Pullen family gets malaria at some point during a year.</li>
+	<li>pg 11 &amp; 121 -- C.E. is shot in his right eye with a shotgun. &nbsp;Barely gets to eye doctor in Atlanta in time to save his left eye. &nbsp;Almost had to get both eyes removed.</li>
+	<li>pg 154 -- At the Naval Air Station machine shop in Pensacola,&nbsp;<span id="isPasted">&nbsp;C.E.'s friend Tex spins up the gyroscope just like C.E. and others had done previously, and it explodes sending shrapnel everywhere, killing Tex. &nbsp;C.E. had incidentally walked away for 5 minutes from the death zone, an area he stands at all day.</span></li>
+	<li><span id="isPasted">pg 186 -- C.E. gives a ride into town to a large mysterious man whose car broke down on the road right outside his house. &nbsp;Later found out the man was an escapee from Texas serving time for murder.</span></li>
+	<li><span id="isPasted">pg 189 -- C.E. and family were rear-ended by a car "going at least 80 mph". &nbsp;After impact, the man gets out of his car menacingly holding a knife at C.E. &nbsp;</span></li>
+	<li><span id="isPasted">pg 232 -- Unloading heavy marble slab from truck using an industrial I-beam winch to unload the slab. &nbsp;Slabs slips off truck, winch falls onto slabs shattering them. &nbsp;C.E. was in between both shattered slabs.</span></li>
+	<li><span id="isPasted">pg 248 -- Back in Connecticut, C.E. slips on ice and falls onto his guitar case. &nbsp;Breaks his lower back and can't move. &nbsp;Stuck in the cold. &nbsp;Would have frozen if not for an individual that pulled up and called an ambulance.</span></li>
+	<li><span id="isPasted">pg 275 -- Foggy car crash accident - injured ribs</span></li>
+	<li><span id="isPasted">pg 276 -- Another car crash, head-on collision, 2 to 3 miles from previous car accident.</span></li>
+	<li><span id="isPasted">pg 280 -- While riding a zero-radius lawn mower, C.E. flips it and was nearly stuck under it at the risk of a fire starting. &nbsp;Was able to push mower over and walk away with re-injured ribs.</span></li>
+	</ol>`,
+	"February 2022 - March 2022")
 
 // The Return of the King
 const b10 = new Book(
@@ -429,4 +453,4 @@ const b1 = new Book(
     "October 2021"
 	);
 
-var books = [b1, b2, b3, b4, b5, b6, b7, b8, b9, b10]; // Projects array
+var books = [b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11]; // Projects array

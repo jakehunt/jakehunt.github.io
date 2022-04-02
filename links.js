@@ -36,4 +36,13 @@ const L7 = new Link("Credit Scores, Bureaus, Reports, Oh MY!",
 					"https://animagraffs.com/credit-scores-work/",
 					"This website in general has been a go-to of mine for a while.  If you're assimilating into the adult world, this animagraff is super helpful!")
 
-var links = [L1, L2, L3, L4, L5, L6, L7];
+const L8 = new Link("Lord of the Rings Interactive Map",
+					"http://lotrproject.com/map/#zoom=3&lat=-1315.5&lon=1500&layers=B",
+					"See the journeys taken by each character in the books on this high-resolution map! Pretty Dope!")
+
+const L9 = new Link("HTML5 Editor",
+					"https://html5-editor.net/",
+					"Discovering this website has made writing book reviews for my website way more fun.  Now I don't have to write my reviews in html! This website converts it to html for me!")
+
+
+var links = [L1, L2, L3, L4, L5, L6, L7, L8, L9];

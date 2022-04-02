@@ -379,6 +379,10 @@ pre code {
 }
 /*-------------------------------------------------*/
 @media (min-width: 769px) {
+  li {
+    font-size: 1rem;
+  }
+
   .main-display-header {
     font-size: 5.5rem;
   }
