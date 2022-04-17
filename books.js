@@ -8,7 +8,7 @@ function Book(title, id, author, btu, releaseDate, pageCount, rating, summary, r
         this.pageCount = pageCount; // Book Page Count
         this.rating = rating; // Book Rating (according to me)
         this.summary = summary; // Book summary
-        this.review = review;
+        this.review = review; // Book Review
         this.whenRead = whenRead;
     }
 
@@ -20,7 +20,6 @@ function Book(title, id, author, btu, releaseDate, pageCount, rating, summary, r
 //
 // STEP 0: Have a good project worth sharing
 // STEP 1: Create project html code section in the projects.html file.  Determine what format you want by looking at existing project formats.  (SOLIDWORKS VIOLIN FORMAT IS SUPER EASY)
-// STEP 1.5: If you want to upload any pictures, make sure to upload pictures to tumblr and grab their urls.
 // STEP 2: Create new project variable 'p3', 'p4', 'p5', etc...
 
 // Format:
@@ -45,6 +44,30 @@ const b8 = new Book(
 	`<!-- Use html5-editor at https://html5-editor.net/  -->`,
 	"December 2021 - January 2022")
 */
+
+const b12 = new Book(
+	"Ready Player Two", // title
+	"#ReadyPlayerTwo", // id
+	"Ernest Cline", // author
+	"https://64.media.tumblr.com/01f40658ad12e5e6067947dc56bb09a5/397f414f156c2c60-f9/s640x960/ff02ccbc4e0f844e944262bbc059fff2b9f561ab.jpg", // btu
+	"November 2020", // releaseDate
+	"13 hrs 47 mins", // pageCount
+	"★★★★", // rating
+	"More 80's trivia and new brain-stimulating technology that will make you think critically about its ethical implications.", // summary
+	`<p><em>Ready Player Two</em> takes the fascinating 80's trivia from&nbsp;<em>Ready Player One</em> and goes even deeper... for better or for worse.&nbsp; If you want to see what sort of trivia this book covers (It goes beyond just the 80's), you should just go to this wiki that lists all the references from the book:&nbsp;<a title="Ready Player Two Wiki" href="https://readyplayerone.fandom.com/wiki/Ready_Player_Two">https://readyplayerone.fandom.com/wiki/Ready_Player_Two</a></p>
+	<p>&nbsp;</p>
+	<p><em>Warning: Spoilers Lie Ahead</em></p>
+	<p>I love trivia, but still felt like I was having to tolerate the depth of knowledge I gained about a couple of topics, particularly about pop artist Prince and arcade game Ninja Princess.&nbsp; As much as I didn't enjoy getting in the weeds on a couple of these topics, Ernest Cline still did a great job of covering such a wide variety.&nbsp; In fact, reading these two books may be the fastest route to becoming sufficiently 'pop-cultured' on the final three decades of the twentieth century.&nbsp; (Sufficient is a debatable term here... and someone who lived during these decades would and should doubtless disagree with my sentiment).</p>
+	<p>The bigger draw for me in this book was the new ONI headset technology it introduces and being able to connect into the virtual world at a whole new level previously unpioneered in&nbsp;<em>Ready Player One.&nbsp;&nbsp;</em>I had no clue how Cline would make this book interesting because at the end of book one it seems like Wade is done with the Oasis and his virtual life, ready to live his real life (which would make for a boring book two).&nbsp; But the ONI changes everything... being able to be induced into a coma to detach your consciousness from your physical body and place it into a new digital body that you can feel and live in as your own in the virtual world.&nbsp; What a cool concept!&nbsp;</p>
+	<p>Here's two more fun concepts this book poses:</p>
+	<ol>
+	<li>Is it ethical to make a digital clone of someone's consciousness/resurrect a clone of their consciousness without their permission?</li>
+	<li>Cline doesn't merely toy around with his proposal on how humanity will search for another planet.&nbsp; He gives a full-blown idealized solution which I find super cool! The main problem with interstellar space travel is how long it takes to get from one star to the next.&nbsp; It would take many generations of humans living and dying their entire lives on a spaceship, dealing with problems like food, radiation, oxygen, and entertainment.&nbsp; Cline solves all of these problems by removing the human... the human body that is.&nbsp; &nbsp;The human consciousness in the form of a digital human (still fully human, I believe Cline would argue) would not have to worry about food, radiation, oxygen, and would have an entire universe to explore on the spaceship within the oasis which would meet all stimulation and entertainment needs for such a long voyage.&nbsp; Once they find a star, they would begin incubating the thousands of frozen embryos they brought along.</li>
+	</ol>
+	<p>&nbsp;</p>
+	<p>I was a sucker for the last-minute twist when you find out Wade's clone has been the one narrating the whole story.&nbsp; Incredible!&nbsp; After writing this review, I think I may be interested in a&nbsp;<em>Ready Player Three</em>... but I wonder how many more 80's references can be pulled off without becoming a bore!&nbsp;</p>
+	<p>&nbsp;</p>`,
+	"March 2021 - April 2022")
 
 const b11 = new Book(
 	"From Hell's Half Acre to The Moon", // title
@@ -453,4 +476,4 @@ const b1 = new Book(
     "October 2021"
 	);
 
-var books = [b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11]; // Projects array
+var books = [b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12]; // Projects array
