@@ -1,6 +1,6 @@
 // Latest Book Picker
-var latestBookObject = books[books.length-1]; 
-var latestLinkObject = links[links.length-1];
+var latestBookObject = books[0]; 
+var latestLinkObject = links[0];
 
 var aboutPage_LatestBookInfo = `<div class="row">
 									<div class="col-lg-1 l-hidden-phone">

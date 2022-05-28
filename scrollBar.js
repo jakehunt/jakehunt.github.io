@@ -1,9 +1,8 @@
   // This code makes the bottom blue bar toggle between fixed and static
-  // (SOMEHOW THIS WORKS LOL) Problem: Text-Wrapping within my <li> elements caused the height measurements to mess up
+  // (SOMEHOW THIS WORKS LOL) Problem: Text-Wrapping within my <li> elements caused the height measurements to mess up... 
+  // NOTE THAT THIS CODE REQUIRES ELEMENTS IN THE HTML WITH THE BELOW IDS AND CLASSES!!!
   $(window).on("load", function() {
-    // Window Height
-    windowH = $(window).height();
-    
+  
     // NavBar Height
     $nav = $(".navbar");
     navHeight = $nav.outerHeight(true);
@@ -21,7 +20,7 @@
     bottomSpacerH = $bottomSpacer.outerHeight(true);
     
     // Bottom Trigger Height
-    bottomTrigger = navHeight + aBH + aSH + bottomSpacerH;    
+    var bottomTrigger = navHeight + aBH + aSH + bottomSpacerH;    
 
     // console.log("Window Height: " + windowH)
     // console.log("Navbar Height: " + navHeight)
@@ -34,7 +33,7 @@
   // Scroll Event 
   $(window).scroll(function (event) {
       var scroll = $(window).scrollTop();
-      var scrollBottom = scroll + windowH;
+      var scrollBottom = scroll + $(window).height();
       
       //var scrollBottom = scroll + wHeight;
           // Do something

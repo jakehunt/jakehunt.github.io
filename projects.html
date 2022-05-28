@@ -16,7 +16,7 @@
 <body>
 <!-- This file is never loaded for viewing.  Rather it is only used to pull files into the project-list html file -->
 
-    <!-- STANDARD HTML PIECES -->
+    <!-- STANDARD HTML PIECES (MODULES)-->
 
     <!-- Return to list bar ***************************************************************************-->
     <div id="return-to-list">
@@ -27,7 +27,7 @@
         </div>
     </div>
 
-        <!-- Return to list bar ***************************************************************************-->
+    <!-- Return to book list bar ***************************************************************************-->
     <div id="return-to-book-list">
         <div class="container-fluid l-spacer"></div>
         <div class="container-fluid l-spacer"></div>
@@ -35,6 +35,27 @@
             <a href="book-list.html"><h5>&#8592; Return to Book List<h5></a>
         </div>
     </div>
+
+    <!-- Pagination div  ***************************************************************************-->
+    <nav aria-label="Page navigation example" id="paginator">
+      <ul class="pagination pagination-lg justify-content-center">
+<!--         <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li> -->
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+<!--         <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li> -->
+      </ul>
+    </nav>
 
     <!-- PROJECTS -->
 
@@ -144,16 +165,16 @@
                 <p class="tab">The fourth iteration of this website includes heavy use of the load() function using ajax in jquery.  This MAJOR improvement allows for repetitive code (like the navbar) to not be hard coded on every webpage. Rather, each webpage can "load" the navbar html code from a single page: in my case the index page. Whenever I make changes to the navbar, now I only have to make them in one place.  This change was inspired by learning about the power of xrefs in AutoCAD.</p>
                 <p class="tab">Another major improvement made in version 4 was automating the html creation of the 'list' pages including the cool links, books, and projects.  The insertAdjacentHTML() and jquery function .html() were both super-handy tools to getting this to work. Now, whenever I want to add to one of these lists, I just have to create a new object constructor and add its variable name to an array. Easy! No need to touch the html whatsoever.</p>
                 <p class="tab">Also, in version 3, each project file had its own webpage.  This was unwieldy and discouraged me from adding new projects.  I stumbled across <a href="https://deanebarker.net/reading/" class="primary-tcolor">deanebarker.net</a> and realized on his reading list page, each review wasn't on its own webpage.  That was the moment I realized I wasn't fully using the power of the CSS display rule.  Now, when you select "See Review" on the book list webpage, or "See Project" on the project list webpage, the contents of the current webpage are hidden and the desired contents are loaded/shown! Brilliant!</p>
+                <p class="tab">The latest update is pagination! Now, on the books and links pages, I can set the number of books/links per page and depending on the total number of books/links, the code updates the total number of pages accordingly!</p>
 
                 <br>
                 <p><strong>Skills Learned:</strong><br> HTML/CSS<br>jQuery<br>Bootstrap</p><br>
-                <p><strong>Version: </strong>4</p><br>
+                <p><strong>Version: </strong>5</p><br>
                 <p><strong>Future Updates: </strong><br>
                 JSON functionality to decrease .js file sizes.<br>
                 Blogging<br>
                 Resum&eacute; Page<br>
                 Transition from the outdated Processing 1.4.8 to p5.js for canvas code<br>
-                Limit the amount of links/books/projects show up at a time on the list webpages.  <br>
                 Keep adding Books, Cool Links, and Projects!</p>
             </div>
             </div>

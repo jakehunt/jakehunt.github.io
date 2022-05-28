@@ -25,12 +25,15 @@
         </div>
 
 
-        <!-- Initial Marker div for inserting book divs above it -->
+        <!-- Initial Marker div for inserting book divs below it -->
         <div class="container-fluid bookRO"></div>
     </div>
 
-    <div id=return-to-book-list></div>
+    <!--  -->
+    <div id=return-to-book-list1></div>
     <div id=book_highlighted></div>
+    <div id=return-to-book-list2></div>
+    <div id=paginator></div>
 
     <div id="pageBottom"></div>
 
@@ -41,16 +44,19 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <!-- Scripts -->
-<script src="scrollBar.js"> </script>
+<!-- <script src="scrollBar.js"> </script> -->
 
 <script>
     $( "#navbar" ).load( "index.html .navbar" );
+    // $( "#paginator" ).load( "projects.html #paginator" );
     $( "#pageBottom" ).load( "index.html #pageBottom" );
 </script>
 
 <!-- Project Picker Code -->
 <script src="books.js"></script>
-<script src="bookPicker.js"></script>
+<script src="bookListFunctions.js"></script>
+<script src="book-List_InitialVisit.js"></script>
+
 
 </body>
 </html>
