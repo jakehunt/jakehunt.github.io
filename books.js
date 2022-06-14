@@ -40,7 +40,7 @@ const b4 = new Book(
 	"November 1954", // releaseDate
 	"322", // pageCount
 	"★★★★★", // rating
-	"This is the meat of the story.  It simply doesn't get more epic than the battle of Helm's Deep.  ", // summary
+	"This is the meat of the story. 
 	`<!-- Use html5-editor at https://html5-editor.net/  -->`,
 	"December 2021 - January 2022")
 */
@@ -492,5 +492,28 @@ const b13 = new Book(
     	"April 2022 - May 2022"
 	)
 
+// Children of Dune
+const b14 = new Book(
+	"The Last Green Valley", // title
+	14, // id
+	"Mark Sullivan", // author
+	"https://64.media.tumblr.com/d6bd529222b98e80eed86ab74a522fca/b29c8ff0dd914b0b-c9/s500x750/a3f58948dd3a9bcb422512f0ef5c52f00ed307f4.jpg", // btu
+	"May 2021", // releaseDate
+	"16 hrs 8 mins", // pageCount
+	"★★★★★", // rating
+	"A family is forced to leave their home in Ukraine during WWII to avoid the Soviet invasion.  To do so, they join a caravan traveling west under Nazi protection.  Stuck between the bear and the wolves, Emil Martel and his family encounter great obstacles on their journey, one that stands out as bold and courageous during a time period so wracked with fear. ", // summary
+	`<p><em>The Last Green Valley</em> is the second story I've read which addresses the Holocaust and world war II.&nbsp; I began listening to it a little warily, thinking "I've already heard the overarching story of this time period before, need I put myself through hearing it again?" However, two things hooked me:</p>
+	<ol>
+	<li>The narrator, Will Damron tells the story of the Martel family in multiple accents which genuinely elevate the listening experience.</li>
+	<li>This book is historical fiction and Mark Sullivan had to do some work to bring these real people to life as interesting characters.&nbsp; Therefore, not just another WWII documentary, more of a personable story (which raises the stakes when it comes to emotional connection).</li>
+	</ol>
+	<p><em>Warning: Spoilers Ahead</em></p>
+	<p>My favorite theme to follow in this book is the story of redemption that involves Emil Martel.&nbsp; At first, Emil can only interpret the evil acts that befall him and his family and the world as evidence that there is no God.&nbsp; The SS Hauptsturmfuhrer Haussmann may have been the cause, when years before in Dubasari, Emil was ordered to kill three Jews to prove his worth to the fatherland, and after saying no and having a gun put to his head, he made the cold decision to kill them in his mind before one of Haussmann's superiors told him to stand down.&nbsp; Something broke in Emil that day when he realized the monster he had become, even though he didn't pull the trigger.</p>
+	<br>
+	<p>Redemption finally comes after Emil tells his story from Dubasari for the first time to the Romanian Corporal Gheorghe.&nbsp; Gheorghe reveals a different interpretation to Emil's story, that it was in fact God that had delivered Emil from having to kill those Jews.</p>
+	<br>
+	<p>In the story, Emil met Corporal Gheorghe twice.&nbsp; The first time was with his family and the trek west and Emil's impression of Gheorghe was that of a crazy man who had been hit in the head a little too hard.&nbsp; The second time was in the POW camp in Poltava, Ukraine.&nbsp; Only on this second visit was Emil able to be influenced by the courageous and faithful disposition of the Corporal.&nbsp; I think back to all of the times I've met somebody for the first time and withheld my personality and interest in them because 'it isn't worth it'.&nbsp; A genuine first interaction that turns into a second, seems to be a powerful phenomenon in human relationships, even if the first did not seem meaningful.&nbsp; There's probably a more eloquent way to say all of that, but it makes me appreciate every interaction with others a little more.</p>`, // review
+    	"May 2022 - June 2022"
+	)
 
-var books = [b13, b12, b11, b10, b9, b8, b7, b6, b5, b4, b3, b2, b1]; // Projects array1
+var books = [b14, b13, b12, b11, b10, b9, b8, b7, b6, b5, b4, b3, b2, b1]; // Projects array1
