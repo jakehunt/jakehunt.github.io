@@ -492,7 +492,7 @@ const b13 = new Book(
     	"April 2022 - May 2022"
 	)
 
-// Children of Dune
+// The Last Green Valley
 const b14 = new Book(
 	"The Last Green Valley", // title
 	14, // id
@@ -516,4 +516,53 @@ const b14 = new Book(
     	"May 2022 - June 2022"
 	)
 
-var books = [b14, b13, b12, b11, b10, b9, b8, b7, b6, b5, b4, b3, b2, b1]; // Projects array1
+// The Insanity of God
+const b15 = new Book(
+	"The Insanity of God", // title
+	15, // id
+	"Nik Ripken", // author
+	"https://64.media.tumblr.com/1b5c57b6e9c8d8aeb314dc748f3f6104/acdc86715ba9994a-d7/s500x750/88ba3825d42070f9c4acc5dc2f3551f6a6d473e4.jpg", // btu
+	"2013", // releaseDate
+	"322", // pageCount
+	"★★★★★", // rating
+	"A miraculous collection of stories from believers living in persecuted nations around the world.  Faith-restoring. ", // summary
+	`<p>The stories collected in this book are unbelievable. Read the 5 minute excerpt below; there are dozens of other unexplainable stories like it throughout the book.</p>
+	<p>&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>"With the counsel of our Persecution Task Force team and based on research, Ruth and I had developed a target list of forty-five countries where we thought we would find significant oppression of believers. By the time we finished putting together an itinerary for my first two trips that summer and early fall of 1998, we had sketched out what seemed like a logical plan for covering the rest of the world.&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>After trips to Russia, Eastern Europe, and China, the plan was to travel to Southeast Asia, then to the Indian subcontinent and its neighboring countries, then to Central Asia, and then finally to return to where it all started for us in the places dominated by Islam- the Persian Gulf, the Middle East, the Horn and across Northern Africa.&nbsp; When conditions were right and contacts fell into place for me to schedule one last stop on my trip home from China, I took the opportunity to spend a few days in a large, very strict Islamic nation.&nbsp; Our original plan would bring us to Muslim countries the following year, but this opportunity presented itself and we saw that as an open door.</p>
+	<p>&nbsp;</p>
+	<p>During my time there a forty-three-year-old Muslim-background believer somehow heard through the oral grapevine that a Westerner had come to his country wanting to discover how Muslims were finding Jesus and what challenges these converts were experiencing as they lived out their faith in hostile environments. I still have no idea how he learned that I was coming or where I would be.&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>It turns out that Pramana traveled twenty-nine hours to find me.&nbsp; He had lived his entire life in a remote, tropical, and rural region of his third-world country. He had never before been on a bus. He had not even traveled on a paved highway. Yet, somehow, he found me in one of his country's major cities. Upon his arrival, he matter-of-factly announced: "I have heard about what you are doing. You need to hear my story also."</p>
+	<p>&nbsp;</p>
+	<p>This man had been born into a people group with a population of twenty-four million.&nbsp; In his people group, there were only three known followers of Jesus, and no church. The only religion that he had ever practiced or known while growing up had been a sort of folk Islam. Pramana knew the Quran by rote. He couldn't actually speak Arabic, so (as an oral communicator from an oral culture) he simply memorized the words of the book as if they were part of some sort of magic formula. He knew the story of Mohammad, of course. But he had never heard of anybody called Jesus, he had never met a believer, and he had no idea what a Bible was.</p>
+	<p>&nbsp;</p>
+	<p>"Five years ago," he told me, "my life was in ruins. My wife and I were always fighting; I was ready to divorce the woman. My children were disrespectful. My animals were not growing or multiplying. My crops were dying in the fields.&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>"So I went to the imam of the nearest mosque for help," Pramana continued.</p>
+	<p>&nbsp;</p>
+	<p>The imam, who also functioned as the local spiritualist, told him, "Okay, son, here is what you need to do. Go buy a white chicken. Bring it to me and I will sacrifice it on your behalf.&nbsp; Then, go back to your village to meditate and fast for three days and three nights.&nbsp; On the third day, you will receive the answer to all the problems that you are having with your wife, your children, your animals, and your crops."</p>
+	<p>&nbsp;</p>
+	<p>Pramana did exactly as he was told. He went back to his village. He meditated, he fasted, and he waited. Then, as he explained it: "I'll never forget, on that third night, a voice without a body came to me after midnight. That voice said, 'Find Jesus, find the gospel.'"</p>
+	<p>&nbsp;</p>
+	<p>This Muslim man had no clue what that even meant. He didn't know if&nbsp;<em>Jesus</em> might be a fruit or a rock or a tree. Pramana told me that the voice without a body also said, "Get out of bed, go over the mountain, and walk down the coast to ________ (a city where he had never been). When you get to that city at daybreak, you will see two men. When you see those men, ask them where&nbsp;________ street is. They will show you the way. Walk up and down that street and look for this number. When you find the number, knock on the door. When the door opens, tell the person why you have come."</p>
+	<p>&nbsp;</p>
+	<p>Pramana did not know that it was an option to be disobedient to the Holy Spirit. He simply assumed that he was required to obey what he had been instructed to do. So he went. He didn't even tell his wife that he was leaving, let alone where he was going. It turns out that he would be gone for two full weeks. During that time, his family had no idea where he was.</p>
+	<p>&nbsp;</p>
+	<p>Pramana simply got out of bed, hiked over the mountain, trekked down the coast, and arrived in the specified city the next morning at daylight. He saw two men who told him where to find the street he wanted. He walked up and down that street until he found a building with the right number on it. He knocked on the door. A moment later, an older gentleman opened the door and asked, "Can I help you?"</p>
+	<p>&nbsp;</p>
+	<p>The younger man declared: "I have come to find Jesus; I have come to find the gospel!" In a flash, the old man's hand shot out from the darkened doorway. He grabbed Pramana by the shirt, dragged him into the apartment, and slammed the door behind him. The old man released his grip and exclaimed, "You Muslims must think I am a fool to fall for a trap as transparent as this!"</p>
+	<p>&nbsp;</p>
+	<p>The very startled and confused traveler replied, "I don't know if you are a fool or not, sir. I just met you. But here is why I've come." Then Pramana told the older man the story of how he had come to be there that day.&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>The Holy Spirit of the Living God had led this young Muslim man through his dream and vision and his obedience to the home of one of the three believers in his twenty-four million people group. Stunned, the older man explained the gospel to this young Muslim man and led him to Christ. For the next two weeks, the old man discipled this new convert in the faith.&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>That had been five years ago. Now, Pramana had made another journey. This journey was to find me and to tell me his remarkable story. He had traveled twenty-nine hours to share how his life had changed since he had found Jesus. There had been blessings and trials and tribulations during the last five years, but his life had clearly been changed in startling ways.&nbsp;</p>
+	<p>&nbsp;</p>
+	<p>I rented a room for him in the large hotel where I was staying. We spent the next three days conducting one of the most memorable interviews I have ever had. We tried to encourage him, and he certainly encouraged us. We were deeply touched by his genuine and growing faith. We marveled that his faith had grown in this hostile world where there had been almost no opportunity for fellowship with other followers of Jesus."</p>`, // review
+    	"June 2022 - July 2022"
+	)
+
+var books = [b15, b14, b13, b12, b11, b10, b9, b8, b7, b6, b5, b4, b3, b2, b1]; // Projects array1
